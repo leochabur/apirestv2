@@ -177,7 +177,7 @@ try{
             $llegada = DateTime::createFromFormat('Y-m-d H:i:s', $row['horaLlegada']);
             $salida = DateTime::createFromFormat('Y-m-d H:i:s', $row['horasalida']);
             $now = new DateTime();
-         //   $now->sub(new DateInterval('PT3H'));
+            $now->sub(new DateInterval('PT3H'));
             
             if ($now > $llegada)
             {
