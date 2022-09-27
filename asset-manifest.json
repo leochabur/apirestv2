@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "http://arribo.local/static/css/main.e9fd561f.css",
+    "main.js": "http://arribo.local/static/js/main.ee724894.js",
+    "service-worker.js": "http://arribo.local/service-worker.js",
+    "index.html": "http://arribo.local/index.html",
+    "main.e9fd561f.css.map": "http://arribo.local/static/css/main.e9fd561f.css.map",
+    "main.ee724894.js.map": "http://arribo.local/static/js/main.ee724894.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9fd561f.css",
+    "static/js/main.ee724894.js"
+  ]
+}
