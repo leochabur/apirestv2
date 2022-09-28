@@ -1,170 +1,51 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+    header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 
-error_reporting(0);
-
-
-
- function distanceGPS($lat1, $lon1, $lat2, $lon2, $unit) 
- {
-
-   // return distancia($lat1, $lon1, $lat2, $lon2);
-
-   $theta = $lon1 - $lon2;
-   $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-   $dist = acos($dist);
-   $dist = rad2deg($dist);
-   $miles = $dist * 60 * 1.1515;
-   $unit = strtoupper($unit);
-  
-   if ($unit == "K") {
-     return ($miles * 1.609344);
-   } else if ($unit == "N") {
-       return ($miles * 0.8684);
-     } else {
-         return $miles;
-       }
- }
-
- function distancia($x1, $y1, $x2, $y2)
- {
-     // return distanceGPS($x1, $y1, $x2, $y2, 'K');
-
-      $moduloRaiz = pow(($x2 - $x1), 2) + pow(($y2 - $y1), 2);
-      return sqrt($moduloRaiz);
- }
-
-
- function distanciaALaRecta($p1, $p2, $pos)
- {
-      $x1 = $p1['x'];
-      $y1 = $p1['y'];
-
-      $x2 = $p2['x'];
-      $y2 = $p2['y'];
-
-      $px = $pos['x'];
-      $py = $pos['y'];
-
-      return distanceGPS($x1, $y1, $px, $py, 'K');
- }
-
-function getPosInterno($interno)
-{
-    if (file_exists("lib/nusoap.php")) {
-    require "lib/nusoap.php";
-    }
-    else {
-        throw new Exception("No se encontro el archivo");
-    }
-
-    try{
-    
-    $oSoapSClient = new nusoap_client('https://app.urbetrack.com/App_services/Operation.asmx?wsdl', true);
-    $params = array();
-    $params['usuario'] = 'masterbus_trafico';
-    $params['hash'] = '85CF3EC9C355539B74F36AB7D03BBC1C';
-    $params['interno'] = "$interno";
-    $resultado = $oSoapSClient->call('ApiGetLocationByVehicle', $params );
-    $lati =$resultado['ApiGetLocationByVehicleResult']['Resultado']['Latitud'];
-    $long =$resultado['ApiGetLocationByVehicleResult']['Resultado']['Longitud'];
-    return ['x' => round((float)$lati,5), 'y' => round((float)$long, 5)];
-    }
-    catch (Exception $e){ throw new Exception($e->getMessage()); }
-}
-
-function procesarParadas($gpx, $pos)
-{
-
-   // return [0 => 'wwww', 1 => 'tyyyyy '.count($gpx->wpt)."   $pos[x]  $pos[y]  "];
-
-     $listaParadas = [];
-     $i = $auxi = 0;
-     $dist = 9999999999999;
-     foreach ($gpx->wpt as $wpt)
-     {
-          if ($i < (count($gpx->wpt) -1))
-          {
-               $px = round((float)$wpt['lat'], 5);
-               $py = round((float)$wpt['lon'], 5);
-
-               //return [0 => [$px, $py]];
-               $listaParadas[$i] = ['name' => (String)$wpt->name, 'point' => ['x' => $px, 'y' => $py], 'recom' => 0, 'posrecta' => 999999, 'dist' => 999999];
-               $auxdist = (distancia($pos['x'], $pos['y'], $px, $py) * 1000);
-               if ($auxdist < $dist)
-               {
-                    $dist = $auxdist;
-                    $auxi = $i;
-               }
-          }
-          $i++;
-     }
-     $listaParadas[$auxi]['recom'] = 1;
-     return [0 => $listaParadas, 1 => $listaParadas[$auxi]];
-}
+    error_reporting(0);
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET')
     {
-try{
+        try
+        {
 
-                                                    $conn = mysqli_connect('mariadb-masterbus-trafico.planisys.net', 'c0mbexpuser', 'Mb2013Exp', 'c0mbexport');
+            $conn = mysqli_connect('mariadb-masterbus-trafico.planisys.net', 'c0mbexpuser', 'Mb2013Exp', 'c0mbexport');
 
-                                                    $sql = "SELECT concat(ord.nombre, ' - ', time_format(hsalidaplantareal, '%H:%i'))  as servicio,
-                                                                   ord.id as iOrdenTrabajo,
-                                                                   hcitacionreal as hcitacion,
-                                                                   hsalidaplantareal as hsalida,
-                                                                   hllegadaplantareal as hllegada,
-                                                                   hfinservicioreal as hfinalizacion,
-                                                                   CONCAT(apellido,', ', emp.nombre) as conductor,
-                                                                   interno,
-                                                                   o.ciudad as origen,
-                                                                   d.ciudad as destino,
-                                                                   s.id_cronograma as idExterno
-                                                            FROM (SELECT id_chofer_1, hcitacionreal, vacio, borrada, id_ciudad_origen, id_ciudad_destino, id_servicio, id_micro, nombre, id, hllegadaplantareal , hsalidaplantareal,
-                                                                         hfinservicioreal, id_estructura, id_cliente, fservicio, id_estructura_servicio
-                                                                 FROM ordenes
-                                                                 WHERE id_estructura = 1 and not borrada and fservicio between DATE_SUB(DATE(NOW()), INTERVAL 1 DAY) AND DATE_ADD(DATE(NOW()), INTERVAL 1 DAY)) ord
-                                                            JOIN ciudades o on ord.id_ciudad_origen = o.id
-                                                            JOIN ciudades d on d.id = ord.id_ciudad_destino
-                                                            LEFT JOIN empleados emp ON emp.id_empleado = ord.id_chofer_1
-                                                            JOIN (SELECT i_v, id, id_estructura, id_cronograma from servicios where id_estructura = 1) s ON s.id = ord.id_servicio AND s.id_estructura = ord.id_estructura_servicio
-                                                            JOIN unidades u ON u.id = ord.id_micro
-                                                            WHERE s.i_v = 'i' AND NOW() BETWEEN DATE_SUB(CONCAT(fservicio,' ', ord.hsalidaplantareal), INTERVAL 120 MINUTE) AND
-                                                                  DATE_ADD(CONCAT(fservicio,' ', ord.hfinservicioreal), INTERVAL 180 MINUTE) AND
-                                                                  (id_cliente = 10 OR ord.nombre like '%rondin%') AND vacio = 0 AND borrada = 0 AND
-                                                                  ord.id_estructura = 1
-                                                            ORDER BY ord.nombre";
+            $sql = getSqlAllServices();
 
-                                                    $result = mysqli_query($conn, $sql);
-                                                    $ordenes = [];
+            $result = mysqli_query($conn, $sql);
+            $ordenes = [];
+            while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+            {
+                $ordenes[] = $row;
+            }
 
-                                                    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-                                                    {
-                                                        $ordenes[] = $row;
-                                                    }
+            mysqli_free_result($result);
+            mysqli_close($conn);
 
-                                                    //echoResponse(200, $ordenes);
-                                                          header("HTTP/1.1 200 OK");
-                                                          header("Content-Type:application/json");
-                                                          header('Access-Control-Allow-Origin: *');
-                                                          echo json_encode(  $ordenes);
-                                                          exit();
+            header("HTTP/1.1 200 OK");
+            header("Content-Type:application/json");
+            header('Access-Control-Allow-Origin: *');
 
-                                                }
-                                                catch (Exception $e){
-                                                          header("HTTP/1.1 200 OK");
-                                                          header("Content-Type:application/json");
-                                                          header('Access-Control-Allow-Origin: *');
-                                                          echo json_encode(  $e->getMessage());
-                                                          exit();
-                                                                    }
+            echo json_encode($ordenes);
+            exit();
+
+        }
+        catch (Exception $e)
+        {
+                              header("HTTP/1.1 200 OK");
+                              header("Content-Type:application/json");
+                              header('Access-Control-Allow-Origin: *');
+                              echo json_encode(['status' => 300, 'message' => 'Error inesperado', 'stack' => $e->getMessage()]);
+                              exit();
+        }
     }
     elseif ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
+        date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-      $input = json_decode(file_get_contents('php://input'), true);
+        $input = json_decode(file_get_contents('php://input'), true);
 
         $conn = mysqli_connect('mariadb-masterbus-trafico.planisys.net', 'c0mbexpuser', 'Mb2013Exp', 'c0mbexport');
 
@@ -172,27 +53,27 @@ try{
 
         $row = mysqli_fetch_array($result);
 
+        mysqli_free_result($result);
+        mysqli_close($conn);
+
         if ($row)
         {
             $llegada = DateTime::createFromFormat('Y-m-d H:i:s', $row['horaLlegada']);
             $salida = DateTime::createFromFormat('Y-m-d H:i:s', $row['horasalida']);
             $now = new DateTime();
-            $now->sub(new DateInterval('PT3H'));
+         //   $now->sub(new DateInterval('PT3H'));
             
             if ($now > $llegada)
             {
-                //echoResponse(200, );
-              header("HTTP/1.1 200 OK");
-              header("Content-Type:application/json");
-              header('Access-Control-Allow-Origin: *');
-              echo json_encode(  ['status' => 301, 'message' => 'El servicio ya ha finalizado']);   
-              exit;
+                  header("HTTP/1.1 200 OK");
+                  header("Content-Type:application/json");
+                  header('Access-Control-Allow-Origin: *');
+                  echo json_encode(  ['status' => 301, 'message' => 'El servicio ya ha finalizado']);   
+                  exit;
             }
-            elseif ($salida > $now)
+            elseif ($salida > $now) //el servicio aun no ha iniciado, solo deberia devolver la parada mas cercana al usuario
             {
-                //el servicio aun no ha iniciado, solo deberia devolver la parada mas cercana al usuario
-
-
+                
                 $gpx = simplexml_load_file("$row[gpx_file]");
 
                 $paradas = procesarParadas($gpx, ['x' => $input['posicionPasajero']['latitud'], 'y' => $input['posicionPasajero']['longitud']]); 
@@ -221,16 +102,31 @@ try{
                             "gpx" => $base64
                         ];
 
+                $now->add(new DateInterval('PT15M'));
 
-              header("HTTP/1.1 200 OK");
-              header("Content-Type:application/json");
-              header('Access-Control-Allow-Origin: *');
-              echo json_encode($result);  
-              exit;             
+                if ($now >= $salida) //el servicio sale dentro de los proximos15 minutos, debe devolver la posicion e la unidad tambien
+                {
+                    try
+                    {
+                        $busPos = getPosInterno($row['interno']);
+                        $bus = ['x' => $busPos['x'], 'y' => $busPos['y'], 'posrecta' => 0, 'distancia' => 9999999999];
+                        $result["informacionUnidad"] = [
+                                                        "latitud" => $busPos['x'], 
+                                                        'longitud' => $busPos['y']
+                                                        ];
+                    }
+                    catch (Exception $e){
+                                        }                    
+                }
+
+                header("HTTP/1.1 200 OK");
+                header("Content-Type:application/json");
+                header('Access-Control-Allow-Origin: *');
+                echo json_encode($result);  
+                exit;             
             }
             else
             {
-
                 try
                 {
                     $busPos = getPosInterno($row['interno']);
@@ -255,9 +151,6 @@ try{
                 $posUserX = $input['posicionPasajero']['latitud'];
                 $posUserY = $input['posicionPasajero']['longitud'];
 
-               /* $posUserX = round((float)-34.67356605542864, 5);
-                $posUserY = round((float)-58.72261047363282, 5);*/
-
                 $paradas = procesarParadas($gpx, ['x' => $posUserX, 'y' => $posUserY]); 
 
                 $listaParadas = $paradas[0];    
@@ -266,7 +159,6 @@ try{
 
                  foreach ($trk->trkseg as $pt) 
                  {
-                      //print "eeee";
                       foreach ($pt->trkpt as $p)
                       {
                            $auxx = round((float)$p['lat'], 5);
@@ -282,8 +174,6 @@ try{
                                 //Va almacenando increm,entalmente las idtancias obtenidas
                                 $puntos[$index]['dist'] = $puntos[($index -1)]['dist'] + ($distanceBetweenPoints * 1000); 
 
-                                //$dist = distanciaALaRecta(['x' => $lastx, 'y' => $lasty], ['x' => $auxx, 'y' => $auxy], ['x' => $userx, 'y' => $usery]);
-
                                 //Utilizado para ubicar la posicion del usuario en la recta de puntos 
                                 $dist = (distanceGPS($auxx, $auxy, $userx, $usery, 'K') * 1000); 
 
@@ -297,7 +187,6 @@ try{
                                 ///por cada recta que compone el recorrido deberia recorrer la lista de paradas para calcular en que posicion debe ubicarla
                                 foreach ($listaParadas as $k => $lp)
                                 {
-                                     //$lastDist = distanciaALaRecta(['x' => $lastx, 'y' => $lasty], ['x' => $auxx, 'y' => $auxy], ['x' => $lp['point']['x'], 'y' => $lp['point']['y']]);
                                      $lastDist = (distanceGPS($auxx, $auxy, $lp['point']['x'], $lp['point']['y'], 'K') * 1000); 
                                      if ($lastDist < $lp['dist'])
                                      {
@@ -308,7 +197,6 @@ try{
                                 }
 
                                 ///para cada recta que compone el recorrido debo calcular en que posicion esta ubicada la unida
-                                //$lastDist = distanciaALaRecta(['x' => $lastx, 'y' => $lasty], ['x' => $auxx, 'y' => $auxy], ['x' => $bus['x'], 'y' => $bus['y']]);
                                 $lastDist = (distanceGPS($auxx, $auxy, $bus['x'], $bus['y'], 'K') * 1000); 
                                 if ($lastDist < $bus['distancia'])
                                 {
@@ -327,7 +215,6 @@ try{
                  $parada = null;
                  $distancia = "";
                  $paradaRecomendada = null;
-
 
                  foreach ($listaParadas as $k => $p)
                  {
@@ -470,13 +357,131 @@ function getSqlOrden($orden)
                                     JOIN unidades u ON u.id = ord.id_micro";
 }
 
-function echoResponse($status_code, $response) {
-    $app = \Slim\Slim::getInstance();
-    $app->status($status_code);
 
-    $app->contentType('application/json');
- 
-    echo json_encode($response);
+function getSqlAllServices()
+{
+    return "SELECT concat(ord.nombre, ' - ', time_format(hsalidaplantareal, '%H:%i'))  as servicio,
+            ord.id as iOrdenTrabajo,
+            hcitacionreal as hcitacion,
+            hsalidaplantareal as hsalida,
+            hllegadaplantareal as hllegada,
+            hfinservicioreal as hfinalizacion,
+            CONCAT(apellido,', ', emp.nombre) as conductor,
+            interno,
+            o.ciudad as origen,
+            d.ciudad as destino,
+            s.id_cronograma as idExterno
+            FROM (SELECT id_chofer_1, hcitacionreal, vacio, borrada, id_ciudad_origen, id_ciudad_destino, id_servicio, id_micro, nombre, id, hllegadaplantareal , hsalidaplantareal,
+            hfinservicioreal, id_estructura, id_cliente, fservicio, id_estructura_servicio
+            FROM ordenes
+            WHERE id_estructura = 1 and not borrada and fservicio between DATE_SUB(DATE(NOW()), INTERVAL 1 DAY) AND DATE_ADD(DATE(NOW()), INTERVAL 1 DAY)) ord
+            JOIN ciudades o on ord.id_ciudad_origen = o.id
+            JOIN ciudades d on d.id = ord.id_ciudad_destino
+            LEFT JOIN empleados emp ON emp.id_empleado = ord.id_chofer_1
+            JOIN (SELECT i_v, id, id_estructura, id_cronograma from servicios where id_estructura = 1) s ON s.id = ord.id_servicio AND s.id_estructura = ord.id_estructura_servicio
+            JOIN unidades u ON u.id = ord.id_micro
+            WHERE s.i_v = 'i' AND NOW() BETWEEN DATE_SUB(CONCAT(fservicio,' ', ord.hsalidaplantareal), INTERVAL 120 MINUTE) AND
+            DATE_ADD(CONCAT(fservicio,' ', ord.hfinservicioreal), INTERVAL 180 MINUTE) AND
+            (id_cliente = 10 OR ord.nombre like '%rondin%') AND vacio = 0 AND borrada = 0 AND
+            ord.id_estructura = 1
+            ORDER BY ord.nombre";
+}
+
+ function distanceGPS($lat1, $lon1, $lat2, $lon2, $unit) 
+ {
+
+   // return distancia($lat1, $lon1, $lat2, $lon2);
+
+   $theta = $lon1 - $lon2;
+   $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+   $dist = acos($dist);
+   $dist = rad2deg($dist);
+   $miles = $dist * 60 * 1.1515;
+   $unit = strtoupper($unit);
+  
+   if ($unit == "K") {
+     return ($miles * 1.609344);
+   } else if ($unit == "N") {
+       return ($miles * 0.8684);
+     } else {
+         return $miles;
+       }
+ }
+
+ function distancia($x1, $y1, $x2, $y2)
+ {
+     // return distanceGPS($x1, $y1, $x2, $y2, 'K');
+
+      $moduloRaiz = pow(($x2 - $x1), 2) + pow(($y2 - $y1), 2);
+      return sqrt($moduloRaiz);
+ }
+
+
+ function distanciaALaRecta($p1, $p2, $pos)
+ {
+      $x1 = $p1['x'];
+      $y1 = $p1['y'];
+
+      $x2 = $p2['x'];
+      $y2 = $p2['y'];
+
+      $px = $pos['x'];
+      $py = $pos['y'];
+
+      return distanceGPS($x1, $y1, $px, $py, 'K');
+ }
+
+function getPosInterno($interno)
+{
+    if (file_exists("lib/nusoap.php")) 
+    {
+        require "lib/nusoap.php";
+    }
+    else 
+    {
+        throw new Exception("No se encontro el archivo");
+    }
+
+    try
+    {    
+        $oSoapSClient = new nusoap_client('https://app.urbetrack.com/App_services/Operation.asmx?wsdl', true);
+        $params = array();
+        $params['usuario'] = 'masterbus_trafico';
+        $params['hash'] = '85CF3EC9C355539B74F36AB7D03BBC1C';
+        $params['interno'] = "$interno";
+        $resultado = $oSoapSClient->call('ApiGetLocationByVehicle', $params );
+        $lati =$resultado['ApiGetLocationByVehicleResult']['Resultado']['Latitud'];
+        $long =$resultado['ApiGetLocationByVehicleResult']['Resultado']['Longitud'];
+        return ['x' => round((float)$lati,5), 'y' => round((float)$long, 5)];
+    }
+    catch (Exception $e){ throw new Exception($e->getMessage()); }
+}
+
+function procesarParadas($gpx, $pos)
+{
+     $listaParadas = [];
+     $i = $auxi = 0;
+     $dist = 9999999999999;
+     foreach ($gpx->wpt as $wpt)
+     {
+          if ($i < (count($gpx->wpt) -1))
+          {
+               $px = round((float)$wpt['lat'], 5);
+               $py = round((float)$wpt['lon'], 5);
+
+               //return [0 => [$px, $py]];
+               $listaParadas[$i] = ['name' => (String)$wpt->name, 'point' => ['x' => $px, 'y' => $py], 'recom' => 0, 'posrecta' => 999999, 'dist' => 999999];
+               $auxdist = (distancia($pos['x'], $pos['y'], $px, $py) * 1000);
+               if ($auxdist < $dist)
+               {
+                    $dist = $auxdist;
+                    $auxi = $i;
+               }
+          }
+          $i++;
+     }
+     $listaParadas[$auxi]['recom'] = 1;
+     return [0 => $listaParadas, 1 => $listaParadas[$auxi]];
 }
 
 ?>
