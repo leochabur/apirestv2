@@ -257,10 +257,10 @@
                           exit;
                       }
 
-                      $indexParada = $p['posrecta'];
+                      $indexParada = $parada['posrecta'];
                       $indexBus = $bus['posrecta'];
-                      $distancia = round((($puntos[$indexParada]['dist'] - $puntos[$indexBus]['dist'])), 2);
-
+                      $distancia = round((($puntos[$indexParada]['dist'] - $puntos[$indexBus]['dist'])), 2); 
+                      $tiempo = intval($distancia / 666);
                       $result = [
                           
                                     "status" => 200,
@@ -268,7 +268,7 @@
                                                               "nombre" => $parada['name'],
                                                               "latitud" => $parada['point']['x'],
                                                               "longitud" => $parada['point']['y'],
-                                                              "tiempoEstimadoArribo" => "0",
+                                                              "tiempoEstimadoArribo" => $tiempo,
                                                               "distanciaEstimadaArribo" => $distancia
                                                             ],
                                     "informacionUsuario" => [
@@ -385,6 +385,29 @@ function getSqlAllServices()
             (id_cliente = 10 OR ord.nombre like '%rondin%') AND vacio = 0 AND borrada = 0 AND
             ord.id_estructura = 1
             ORDER BY ord.nombre";
+}
+    
+function getDataGraphHopper($p1x, $p1y, $p2x, $p2y)
+{
+      $url = "https://graphhopper.com/api/1/route?key=6b1a5ab2-ad61-4a90-b90e-18d60e575587&point=$p1x,$p1y&point=$p2x,$p2y&points_encoded=false&instructions=false";
+      $curl = curl_init();
+      curl_setopt_array($curl, array(
+        CURLOPT_URL => $url,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_RETURNTRANSFER => 1
+      ));
+
+      $response = curl_exec($curl);       
+
+      $input = json_decode($response, true);
+
+      $data = $input['paths'];
+      if ($data[0])
+      {
+        return ['dist' => $data[0]['distance'], 'time' => $data[0]['time']];
+      }
+
+      return null;
 }
 
  function distanceGPS($lat1, $lon1, $lat2, $lon2, $unit) 
