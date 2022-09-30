@@ -5,6 +5,8 @@
 
     error_reporting(0);
 
+    ///////////ultima actualñizacion  30-09-2022 20:00
+
     if ($_SERVER['REQUEST_METHOD'] == 'GET')
     {
         try
@@ -84,15 +86,16 @@
 
                 $base64 = base64_encode($image); 
 
+                $nombre = (string)$parada['name'];
                 $result = [
                   
                             "status" => 200,
                             "mensaje" => "El servicio aun no ha iniciado",
                             "paradaRecomendada" => [
-                                                      "nombre" => $parada['name'],
+                                                      "nombre" => substr(substr($nombre, strpos($nombre, '-')+1), 0, -15),
                                                       "latitud" => $parada['point']['x'],
                                                       "longitud" => $parada['point']['y'],
-                                                      "tiempoEstimadoArribo" => "0",
+                                                      "tiempoEstimadoArribo" => "",
                                                       "distanciaEstimadaArribo" => $parada['dist']
                                                     ],
                             "informacionUsuario" => [
@@ -261,11 +264,21 @@
                       $indexBus = $bus['posrecta'];
                       $distancia = round((($puntos[$indexParada]['dist'] - $puntos[$indexBus]['dist'])), 2); 
                       $tiempo = intval($distancia / 666);
+                      if ($tiempo == 0)
+                      {
+                            $tiempo = 'Menos de 1 min.';
+                      }
+                      elseif ($tiempo > 0)
+                      {
+                        $tiempo = $tiempo.' min.';
+                      }
+
+                      $nombre = (string)$parada['name'];
                       $result = [
                           
                                     "status" => 200,
                                     "paradaRecomendada" => [
-                                                              "nombre" => $parada['name'],
+                                                              "nombre" =>substr(substr($nombre, strpos($nombre, '-')+1), 0, -15),
                                                               "latitud" => $parada['point']['x'],
                                                               "longitud" => $parada['point']['y'],
                                                               "tiempoEstimadoArribo" => $tiempo,
@@ -284,14 +297,27 @@
                  }
                  else
                  {
+                      $indexParada = $parada['posrecta'];
+                      $indexBus = $bus['posrecta'];
+                      $distancia = round((($puntos[$indexParada]['dist'] - $puntos[$indexBus]['dist'])), 2); 
+                      $tiempo = intval($distancia / 666);
+                      if ($tiempo == 0)
+                      {
+                            $tiempo = 'Menos de 1 min.';
+                      }
+                      elseif ($tiempo > 0)
+                      {
+                        $tiempo = $tiempo.' min.';
+                      }
+                      $nombre = (string)$parada['name'];
                     $result = [
                       
                                 "status" => 200,
                                 "paradaRecomendada" => [
-                                                          "nombre" => $parada['name'],
+                                                          "nombre" => substr(substr($nombre, strpos($nombre, '-')+1), 0, -15),
                                                           "latitud" => $parada['point']['x'],
                                                           "longitud" => $parada['point']['y'],
-                                                          "tiempoEstimadoArribo" => "0",
+                                                          "tiempoEstimadoArribo" => $tiempo,
                                                           "distanciaEstimadaArribo" => $distancia
                                                         ],
                                 "informacionUsuario" => [
