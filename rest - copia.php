@@ -107,7 +107,7 @@
 
                 $now->add(new DateInterval('PT15M'));
 
-                if ($now >= $salida) //el servicio sale dentro de los proximos 15 minutos, debe devolver la posicion e la unidad tambien
+                if ($now >= $salida) //el servicio sale dentro de los proximos15 minutos, debe devolver la posicion e la unidad tambien
                 {
                     try
                     {
@@ -133,24 +133,6 @@
                 try
                 {
                     $busPos = getPosInterno($row['interno']);
-
-                    $fecha_hora = str_replace('T', ' ', $busPos['f']);
-
-                    $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $fecha_hora);
-                    $fecha->sub(new DateInterval('PT3H'));
-                    $fecha->add(new DateInterval('PT2M'));
-
-                    $now = new DateTime();
-
-                    if ($now > $fecha)
-                    {
-                          header("HTTP/1.1 200 OK");
-                          header("Content-Type:application/json");
-                          header('Access-Control-Allow-Origin: *');
-                          echo json_encode(  ['status' => 301, 'message' => 'Lo sentimos, por el momento no podemos brindar la informacion solicitada. Reintente nuevamente en unos minutos']);   
-                          exit;
-                    }
-
                 }
                 catch (Exception $e){
                                     }
@@ -519,8 +501,7 @@ function getPosInterno($interno)
         $resultado = $oSoapSClient->call('ApiGetLocationByVehicle', $params );
         $lati =$resultado['ApiGetLocationByVehicleResult']['Resultado']['Latitud'];
         $long =$resultado['ApiGetLocationByVehicleResult']['Resultado']['Longitud'];
-        $fecha =$resultado['ApiGetLocationByVehicleResult']['Resultado']['Fecha'];
-        return ['x' => round((float)$lati,5), 'y' => round((float)$long, 5), 'f' => $fecha];
+        return ['x' => round((float)$lati,5), 'y' => round((float)$long, 5)];
     }
     catch (Exception $e){ throw new Exception($e->getMessage()); }
 }
