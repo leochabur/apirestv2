@@ -142,7 +142,7 @@
 
                     $now = new DateTime();
 
-                    if ($now > $fecha)
+                    if (true)//($now > $fecha)
                     {
                           header("HTTP/1.1 200 OK");
                           header("Content-Type:application/json");
