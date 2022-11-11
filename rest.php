@@ -424,9 +424,9 @@ function getSqlAllServices()
             LEFT JOIN empleados emp ON emp.id_empleado = ord.id_chofer_1
             JOIN (SELECT i_v, id, id_estructura, id_cronograma from servicios where id_estructura = 1) s ON s.id = ord.id_servicio AND s.id_estructura = ord.id_estructura_servicio
             JOIN unidades u ON u.id = ord.id_micro
-            WHERE s.i_v = 'i' AND NOW() BETWEEN DATE_SUB(CONCAT(fservicio,' ', ord.hsalidaplantareal), INTERVAL 120 MINUTE) AND
-            DATE_ADD(CONCAT(fservicio,' ', ord.hfinservicioreal), INTERVAL 180 MINUTE) AND
-            (id_cliente = 10 OR ord.nombre like '%rondin%') AND vacio = 0 AND borrada = 0 AND
+            WHERE s.i_v = 'i' AND NOW() BETWEEN DATE_SUB(CONCAT(fservicio,' ', ord.hsalidaplantareal), INTERVAL 15 MINUTE) AND
+            DATE_ADD(CONCAT(fservicio,' ', ord.hfinservicioreal), INTERVAL 5 MINUTE) AND
+            (id_cliente = 10) AND (ord.nombre not like '%rondin%') AND vacio = 0 AND borrada = 0 AND
             ord.id_estructura = 1
             ORDER BY ord.nombre";
 }
