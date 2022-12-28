@@ -90,7 +90,7 @@
                // $image = file_get_contents("$row[gpx_file]");
 
                // $base64 = base64_encode($image); 
-                $base64 = base64_decode(json_decode($res));
+                $base64 = base64_encode(json_decode($res));
 
                 $nombre = (string)$parada['name'];
                 $result = [
