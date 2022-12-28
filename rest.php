@@ -76,15 +76,21 @@
             elseif ($salida > $now) //el servicio aun no ha iniciado, solo deberia devolver la parada mas cercana al usuario
             {
                 
-                $gpx = simplexml_load_file("$row[gpx_file]");
+                //$gpx = simplexml_load_file("$row[gpx_file]");
+
+                $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/get/$row[gpx_file]");
+
+                $gpx = simplexml_load_string(json_decode($res));
+
 
                 $paradas = procesarParadas($gpx, ['x' => $input['posicionPasajero']['latitud'], 'y' => $input['posicionPasajero']['longitud']]); 
 
                 $parada = $paradas[1]; 
 
-                $image = file_get_contents("$row[gpx_file]");
+               // $image = file_get_contents("$row[gpx_file]");
 
-                $base64 = base64_encode($image); 
+               // $base64 = base64_encode($image); 
+                $base64 = base64_decode(json_decode($res));
 
                 $nombre = (string)$parada['name'];
                 $result = [
