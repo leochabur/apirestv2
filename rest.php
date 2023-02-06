@@ -78,7 +78,11 @@
                 
                 //$gpx = simplexml_load_file("$row[gpx_file]");
 
-                $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/get/$row[gpx_file]");
+               /* $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/get/$row[gpx_file]");
+
+                $gpx = simplexml_load_string(json_decode($res));*/
+
+                $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/getwid/$row[idExterno]");//file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/get/$row[gpx_file]");
 
                 $gpx = simplexml_load_string(json_decode($res));
 
@@ -177,10 +181,13 @@
 
 
                 ///// AGREGADO EL 28 del 12 del 2022
-                    $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/get/$row[gpx_file]");
+                   /* $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/get/$row[gpx_file]");
+
+                    $gpx = simplexml_load_string(json_decode($res));*/
+
+                    $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/getwid/$row[idExterno]");//file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/get/$row[gpx_file]");
 
                     $gpx = simplexml_load_string(json_decode($res));
-
 
                     $paradas = procesarParadas($gpx, ['x' => $input['posicionPasajero']['latitud'], 'y' => $input['posicionPasajero']['longitud']]); 
 
