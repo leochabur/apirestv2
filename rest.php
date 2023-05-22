@@ -45,6 +45,18 @@
     }
     elseif ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
+/*
+{
+    "idServicio": "5343",
+    "interno": "358",
+    "idOrdenTrabajo": "5593107",
+    "posicionPasajero": {
+        "latitud": -35.1727448,
+        "longitud": -58.224882
+    }
+}*/
+
+
         date_default_timezone_set('America/Argentina/Buenos_Aires');
 
         $input = json_decode(file_get_contents('php://input'), true);
@@ -53,10 +65,28 @@
 
         $result = mysqli_query($conn, getSqlOrden($input['idOrdenTrabajo']));
 
+        $srv = "";
+        $interno = "";
+        $latPax = "";
+        $lonPax = "";
+
+        try
+        {
+            $srv = $input['idOrdenTrabajo'];
+            $interno = $input['interno'];
+            $posicionPax = $input['posicionPasajero'];
+            if (($posicionPax) && is_array($posicionPax))
+            {
+                $latPax = $posicionPax['latitud'];
+                $lonPax = $posicionPax['longitud'];
+            }
+        }
+        catch (Exception $e){}
+
         $row = mysqli_fetch_array($result);
 
         mysqli_free_result($result);
-        mysqli_close($conn);
+        
 
         if ($row)
         {
@@ -67,10 +97,15 @@
             
             if ($now > $llegada)
             {
+                  $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento)
+                             VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'El servicio ya ha finalizado', now())";
+                  $log = mysqli_query($conn, $sqlLog);
+                  mysqli_close($conn);
+
                   header("HTTP/1.1 200 OK");
                   header("Content-Type:application/json");
                   header('Access-Control-Allow-Origin: *');
-                  echo json_encode(  ['status' => 301, 'message' => 'El servicio ya ha finalizado']);   
+                  echo json_encode(  ['status' => 301, 'message' => 'El servicio ya ha finalizado!']);   
                   exit;
             }
             elseif ($salida > $now) //el servicio aun no ha iniciado, solo deberia devolver la parada mas cercana al usuario
@@ -132,6 +167,24 @@
                                         }                    
                 }
 
+                $paradaNombre = substr(substr($nombre, strpos($nombre, '-')+1), 0, -15);
+                $paradaLatitud = $result['paradaRecomendada']['latitud'];
+                $paradaLongitud = $result['paradaRecomendada']['longitud'];
+
+                $busLat = $busLong = 0;
+                if (array_key_exists('informacionUnidad', $result)) 
+                {
+                    $busLat = $result['informacionUnidad']['latitud'];
+                    $busLong = $result['informacionUnidad']['longitud'];
+                }
+
+
+                $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento, parada_recomendada, bus_latitud, bus_longitud, parada_latitud, parada_longitud)
+                           VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'El servicio aun no ha iniciado', now(), '$paradaNombre', '$busLat', '$busLong', '$paradaLatitud', '$paradaLongitud')";
+                $log = mysqli_query($conn, $sqlLog);
+
+                mysqli_close($conn);
+
                 header("HTTP/1.1 200 OK");
                 header("Content-Type:application/json");
                 header('Access-Control-Allow-Origin: *');
@@ -154,6 +207,10 @@
 
                     if ($now > $fecha)
                     {
+                $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento)
+                           VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'La hora de recuperacion de la posicion del interno es al menos dos minutos anterior a la hora del requerimiento', now())";
+                $log = mysqli_query($conn, $sqlLog);
+
                           header("HTTP/1.1 200 OK");
                           header("Content-Type:application/json");
                           header('Access-Control-Allow-Origin: *');
@@ -302,6 +359,12 @@
 
                       if (!$seteo)
                       {
+                          $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento, bus_latitud, bus_longitud)
+                                       VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'No existen paradas disponibles para el servicio', now(), '$bus[x]', '$bus[y]')";
+                          $log = mysqli_query($conn, $sqlLog);
+
+                          mysqli_close($conn);
+
                           header("HTTP/1.1 200 OK");
                           header("Content-Type:application/json");
                           header('Access-Control-Allow-Origin: *');
@@ -359,7 +422,7 @@
                         $tiempo = $tiempo.' min.';
                       }
                       $nombre = (string)$parada['name'];
-                    $result = [
+                      $result = [
                       
                                 "status" => 200,
                                 "paradaRecomendada" => [
@@ -381,11 +444,28 @@
                             ];
                  }
 
-                  header("HTTP/1.1 200 OK");
-                  header("Content-Type:application/json");
-                  header('Access-Control-Allow-Origin: *');
-                  return print (json_encode($result));   
-                  exit;
+                    $paradaNombre = substr(substr($nombre, strpos($nombre, '-')+1), 0, -15);
+                    $paradaLatitud = $result['paradaRecomendada']['latitud'];
+                    $paradaLongitud = $result['paradaRecomendada']['longitud'];
+
+                    $busLat = $busLong = 0;
+                    if (array_key_exists('informacionUnidad', $result)) 
+                    {
+                        $busLat = $result['informacionUnidad']['latitud'];
+                        $busLong = $result['informacionUnidad']['longitud'];
+                    }
+
+                 $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento, parada_recomendada, bus_latitud, bus_longitud, parada_latitud, parada_longitud)
+                           VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'Servicio prcesado exitosamente', now(), '$paradaNombre', '$busLat', '$busLong', '$paradaLatitud', '$paradaLongitud')";
+                 $log = mysqli_query($conn, $sqlLog);
+
+                 mysqli_close($conn);
+
+                 header("HTTP/1.1 200 OK");
+                 header("Content-Type:application/json");
+                 header('Access-Control-Allow-Origin: *');
+                 return print (json_encode($result));   
+                 exit;
             }
         }
         else
