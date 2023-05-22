@@ -97,9 +97,13 @@
             
             if ($now > $llegada)
             {
-                  $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento)
-                             VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'El servicio ya ha finalizado', now())";
-                  $log = mysqli_query($conn, $sqlLog);
+                try
+                {
+                      $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento)
+                                 VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'El servicio ya ha finalizado', now())";
+                      $log = mysqli_query($conn, $sqlLog);
+                }
+                catch(Exception $e){}
                   mysqli_close($conn);
 
                   header("HTTP/1.1 200 OK");
@@ -178,10 +182,14 @@
                     $busLong = $result['informacionUnidad']['longitud'];
                 }
 
+                try
+                {
 
-                $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento, parada_recomendada, bus_latitud, bus_longitud, parada_latitud, parada_longitud)
-                           VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'El servicio aun no ha iniciado', now(), '$paradaNombre', '$busLat', '$busLong', '$paradaLatitud', '$paradaLongitud')";
-                $log = mysqli_query($conn, $sqlLog);
+                    $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento, parada_recomendada, bus_latitud, bus_longitud, parada_latitud, parada_longitud)
+                               VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'El servicio aun no ha iniciado', now(), '$paradaNombre', '$busLat', '$busLong', '$paradaLatitud', '$paradaLongitud')";
+                    $log = mysqli_query($conn, $sqlLog);
+                }
+                catch(Exception $e){}
 
                 mysqli_close($conn);
 
@@ -207,10 +215,13 @@
 
                     if ($now > $fecha)
                     {
-                $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento)
-                           VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'La hora de recuperacion de la posicion del interno es al menos dos minutos anterior a la hora del requerimiento', now())";
-                $log = mysqli_query($conn, $sqlLog);
-
+                        try
+                        {
+                            $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento)
+                                       VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'La hora de recuperacion de la posicion del interno es al menos dos minutos anterior a la hora del requerimiento', now())";
+                            $log = mysqli_query($conn, $sqlLog);
+                        }
+                        catch(Exception $e){}
                           header("HTTP/1.1 200 OK");
                           header("Content-Type:application/json");
                           header('Access-Control-Allow-Origin: *');
@@ -359,9 +370,16 @@
 
                       if (!$seteo)
                       {
-                          $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento, bus_latitud, bus_longitud)
-                                       VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'No existen paradas disponibles para el servicio', now(), '$bus[x]', '$bus[y]')";
-                          $log = mysqli_query($conn, $sqlLog);
+
+                            try{
+
+
+                              $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento, bus_latitud, bus_longitud)
+                                           VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'No existen paradas disponibles para el servicio', now(), '$bus[x]', '$bus[y]')";
+                              $log = mysqli_query($conn, $sqlLog);
+
+                            }
+                            catch(Exception $e){}
 
                           mysqli_close($conn);
 
@@ -455,9 +473,14 @@
                         $busLong = $result['informacionUnidad']['longitud'];
                     }
 
+                try
+                {
+
                  $sqlLog = "INSERT INTO log_arribo_predictivo (id_orden, interno, pax_latitud, pax_longitud, mensaje, fecha_hora_evento, parada_recomendada, bus_latitud, bus_longitud, parada_latitud, parada_longitud)
                            VALUES ('$srv', '$interno', '$latPax', '$lonPax', 'Servicio prcesado exitosamente', now(), '$paradaNombre', '$busLat', '$busLong', '$paradaLatitud', '$paradaLongitud')";
                  $log = mysqli_query($conn, $sqlLog);
+                }
+                catch(Exception $e){}
 
                  mysqli_close($conn);
 
