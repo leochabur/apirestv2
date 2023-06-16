@@ -4,53 +4,53 @@
      version="1.1"
      creator="Paxtracker">
   
-    <wpt lat="-34.50574" lon="-59.33452">
-    <name>101-Villa Espil 0420/1340/9999</name>
+    <wpt lat="-34.50574" lon="-59.33453">
+    <name>101-Ruta 7 B Villa Espil 0420/1249/2128</name>
   </wpt>
-    <wpt lat="-34.48210" lon="-59.37998">
-    <name>102-Au Lujan Junin y La Garganta 0425/1345/9999</name>
+    <wpt lat="-34.48198" lon="-59.38012">
+    <name>102-Au Lujan Junin Pasarela La Garganta 0425/1254/2133</name>
   </wpt>
-    <wpt lat="-34.46099" lon="-59.41099">
-    <name>103-Ruta 7 0426/1346/9999</name>
+    <wpt lat="-34.46075" lon="-59.41196">
+    <name>103-Ruta 7 Entrada de San Andres de Giles 0426/1255/2134</name>
   </wpt>
-    <wpt lat="-34.45524" lon="-59.43889">
-    <name>104-Ruta 7 y Estacion de Servicio Axion 0428/1349/9999</name>
+    <wpt lat="-34.45525" lon="-59.43883">
+    <name>104-Ruta 7 y C Manchi 0428/1257/2136</name>
   </wpt>
-    <wpt lat="-34.45102" lon="-59.44781">
-    <name>105-Maipu y J Pichetto 0432/1355/9999</name>
+    <wpt lat="-34.45107" lon="-59.44783">
+    <name>105-Maipu y J Pichetto 0432/1301/2140</name>
   </wpt>
-    <wpt lat="-34.44935" lon="-59.44727">
-    <name>106-Maipu y Rawson 0433/1356/9999</name>
+    <wpt lat="-34.44939" lon="-59.44728">
+    <name>106-Maipu y Rawson 0433/1302/2141</name>
   </wpt>
-    <wpt lat="-34.44852" lon="-59.44698">
-    <name>107-Maipu y Urquiza 0434/1357/9999</name>
+    <wpt lat="-34.44856" lon="-59.44699">
+    <name>107-Maipu y Gral Urquiza 0434/1303/2142</name>
   </wpt>
-    <wpt lat="-34.44770" lon="-59.44669">
-    <name>108-Maipu y Quintana 0435/1358/9999</name>
+    <wpt lat="-34.44772" lon="-59.44670">
+    <name>108-Maipu y M Quintana 0435/1304/2143</name>
   </wpt>
-    <wpt lat="-34.44520" lon="-59.44582">
-    <name>109-Maipu y Avellaneda 0436/1359/9999</name>
+    <wpt lat="-34.44522" lon="-59.44583">
+    <name>109-Maipu y Avellaneda 0436/1305/2144</name>
   </wpt>
     <wpt lat="-34.44356" lon="-59.44525">
-    <name>110-Maipu y Belgrano 0437/1400/9999</name>
+    <name>110-Maipu y Belgrano 0437/1306/2145</name>
   </wpt>
-    <wpt lat="-34.44182" lon="-59.44464">
-    <name>111-Maipu y Sarmiento 0438/1401/9999</name>
+    <wpt lat="-34.44190" lon="-59.44466">
+    <name>111-Maipu y Domingo F Sarmiento 0438/1307/2146</name>
   </wpt>
-    <wpt lat="-34.43932" lon="-59.44378">
-    <name>112-Maipu y F. Suero 0439/1402/9999</name>
+    <wpt lat="-34.43936" lon="-59.44379">
+    <name>112-Maipu y F Suero 0439/1308/2147</name>
   </wpt>
     <wpt lat="-34.43734" lon="-59.44621">
-    <name>113-Av. Lucas Scully y San Martin 0441/1404/9999</name>
+    <name>113-Av Lucas Scully y San Martin 0440/1309/2148</name>
   </wpt>
-    <wpt lat="-34.43587" lon="-59.44978">
-    <name>114-Acceso Colon y Lujan 0442/1405/9999</name>
+    <wpt lat="-34.43592" lon="-59.44969">
+    <name>114-Acceso Colon y Lujan 0442/1311/2150</name>
   </wpt>
-    <wpt lat="-34.30112" lon="-59.32579">
-    <name>115-Solis 0506/1433/9999</name>
+    <wpt lat="-34.29877" lon="-59.32914">
+    <name>115-Ruta 8 y Ruta 193 ( Solis ) 0505/1334/2213</name>
   </wpt>
-    <wpt lat="-34.13720" lon="-59.04636">
-    <name>116-Planta Toyota 0540/1510/9999</name>
+    <wpt lat="-34.13716" lon="-59.04638">
+    <name>116-Planta Toyota 0540/1419/2258</name>
   </wpt>
     <trk>
     <name>
@@ -60,7 +60,7 @@
       Toyota - V. Espil - Giles - Entrada
     </desc>
     <trkseg>
-            <trkpt lat="-34.50574" lon="-59.33452"></trkpt>
+            <trkpt lat="-34.50574" lon="-59.33453"></trkpt>
             <trkpt lat="-34.50553" lon="-59.33484"></trkpt>
             <trkpt lat="-34.50558" lon="-59.33489"></trkpt>
             <trkpt lat="-34.50560" lon="-59.33493"></trkpt>
@@ -84,7 +84,8 @@
             <trkpt lat="-34.48324" lon="-59.37823"></trkpt>
             <trkpt lat="-34.48294" lon="-59.37877"></trkpt>
             <trkpt lat="-34.48243" lon="-59.37954"></trkpt>
-            <trkpt lat="-34.48210" lon="-59.37998"></trkpt>
+            <trkpt lat="-34.48215" lon="-59.37991"></trkpt>
+            <trkpt lat="-34.48198" lon="-59.38011"></trkpt>
             <trkpt lat="-34.48164" lon="-59.38051"></trkpt>
             <trkpt lat="-34.48113" lon="-59.38101"></trkpt>
             <trkpt lat="-34.48096" lon="-59.38117"></trkpt>
@@ -105,7 +106,7 @@
             <trkpt lat="-34.46211" lon="-59.40602"></trkpt>
             <trkpt lat="-34.46189" lon="-59.40722"></trkpt>
             <trkpt lat="-34.46167" lon="-59.40823"></trkpt>
-            <trkpt lat="-34.46099" lon="-59.41099"></trkpt>
+            <trkpt lat="-34.46075" lon="-59.41197"></trkpt>
             <trkpt lat="-34.45971" lon="-59.41615"></trkpt>
             <trkpt lat="-34.45952" lon="-59.41673"></trkpt>
             <trkpt lat="-34.45946" lon="-59.41689"></trkpt>
@@ -129,29 +130,29 @@
             <trkpt lat="-34.45631" lon="-59.43468"></trkpt>
             <trkpt lat="-34.45570" lon="-59.43658"></trkpt>
             <trkpt lat="-34.45546" lon="-59.43760"></trkpt>
-            <trkpt lat="-34.45524" lon="-59.43889"></trkpt>
+            <trkpt lat="-34.45525" lon="-59.43883"></trkpt>
             <trkpt lat="-34.45508" lon="-59.43965"></trkpt>
             <trkpt lat="-34.45483" lon="-59.43956"></trkpt>
             <trkpt lat="-34.45449" lon="-59.44047"></trkpt>
             <trkpt lat="-34.45415" lon="-59.44152"></trkpt>
             <trkpt lat="-34.45434" lon="-59.44160"></trkpt>
             <trkpt lat="-34.45407" lon="-59.44256"></trkpt>
-            <trkpt lat="-34.45348" lon="-59.44553"></trkpt>
+            <trkpt lat="-34.45348" lon="-59.44549"></trkpt>
             <trkpt lat="-34.45310" lon="-59.44749"></trkpt>
             <trkpt lat="-34.45281" lon="-59.44845"></trkpt>
-            <trkpt lat="-34.45103" lon="-59.44781"></trkpt>
+            <trkpt lat="-34.45108" lon="-59.44783"></trkpt>
             <trkpt lat="-34.45019" lon="-59.44755"></trkpt>
-            <trkpt lat="-34.44936" lon="-59.44727"></trkpt>
-            <trkpt lat="-34.44853" lon="-59.44698"></trkpt>
-            <trkpt lat="-34.44771" lon="-59.44669"></trkpt>
-            <trkpt lat="-34.44521" lon="-59.44582"></trkpt>
+            <trkpt lat="-34.44940" lon="-59.44728"></trkpt>
+            <trkpt lat="-34.44856" lon="-59.44699"></trkpt>
+            <trkpt lat="-34.44773" lon="-59.44670"></trkpt>
+            <trkpt lat="-34.44522" lon="-59.44583"></trkpt>
             <trkpt lat="-34.44357" lon="-59.44525"></trkpt>
-            <trkpt lat="-34.44183" lon="-59.44464"></trkpt>
-            <trkpt lat="-34.43933" lon="-59.44378"></trkpt>
+            <trkpt lat="-34.44191" lon="-59.44466"></trkpt>
+            <trkpt lat="-34.43937" lon="-59.44379"></trkpt>
             <trkpt lat="-34.43850" lon="-59.44350"></trkpt>
             <trkpt lat="-34.43844" lon="-59.44345"></trkpt>
             <trkpt lat="-34.43835" lon="-59.44336"></trkpt>
-            <trkpt lat="-34.43804" lon="-59.44376"></trkpt>
+            <trkpt lat="-34.43774" lon="-59.44416"></trkpt>
             <trkpt lat="-34.43762" lon="-59.44431"></trkpt>
             <trkpt lat="-34.43766" lon="-59.44510"></trkpt>
             <trkpt lat="-34.43764" lon="-59.44521"></trkpt>
@@ -162,8 +163,9 @@
             <trkpt lat="-34.43623" lon="-59.44878"></trkpt>
             <trkpt lat="-34.43614" lon="-59.44907"></trkpt>
             <trkpt lat="-34.43609" lon="-59.44940"></trkpt>
+            <trkpt lat="-34.43592" lon="-59.44970"></trkpt>
             <trkpt lat="-34.43588" lon="-59.44977"></trkpt>
-            <trkpt lat="-34.43587" lon="-59.44978"></trkpt>
+            <trkpt lat="-34.43586" lon="-59.44979"></trkpt>
             <trkpt lat="-34.43584" lon="-59.44990"></trkpt>
             <trkpt lat="-34.43588" lon="-59.44999"></trkpt>
             <trkpt lat="-34.43591" lon="-59.45002"></trkpt>
@@ -217,8 +219,7 @@
             <trkpt lat="-34.26373" lon="-59.44960"></trkpt>
             <trkpt lat="-34.26320" lon="-59.44904"></trkpt>
             <trkpt lat="-34.26310" lon="-59.44886"></trkpt>
-            <trkpt lat="-34.26301" lon="-59.44862"></trkpt>
-            <trkpt lat="-34.26298" lon="-59.44844"></trkpt>
+            <trkpt lat="-34.26302" lon="-59.44866"></trkpt>
             <trkpt lat="-34.26296" lon="-59.44837"></trkpt>
             <trkpt lat="-34.26296" lon="-59.44831"></trkpt>
             <trkpt lat="-34.26295" lon="-59.44806"></trkpt>
@@ -252,20 +253,19 @@
             <trkpt lat="-34.29094" lon="-59.34026"></trkpt>
             <trkpt lat="-34.29123" lon="-59.33947"></trkpt>
             <trkpt lat="-34.29146" lon="-59.33897"></trkpt>
-            <trkpt lat="-34.29166" lon="-59.33857"></trkpt>
             <trkpt lat="-34.29189" lon="-59.33814"></trkpt>
             <trkpt lat="-34.29221" lon="-59.33761"></trkpt>
             <trkpt lat="-34.29249" lon="-59.33720"></trkpt>
             <trkpt lat="-34.29614" lon="-59.33228"></trkpt>
             <trkpt lat="-34.29734" lon="-59.33070"></trkpt>
             <trkpt lat="-34.29792" lon="-59.33001"></trkpt>
-            <trkpt lat="-34.29844" lon="-59.32947"></trkpt>
+            <trkpt lat="-34.29877" lon="-59.32914"></trkpt>
             <trkpt lat="-34.29917" lon="-59.32874"></trkpt>
             <trkpt lat="-34.29966" lon="-59.32818"></trkpt>
             <trkpt lat="-34.30014" lon="-59.32756"></trkpt>
             <trkpt lat="-34.30061" lon="-59.32682"></trkpt>
             <trkpt lat="-34.30083" lon="-59.32642"></trkpt>
-            <trkpt lat="-34.30112" lon="-59.32579"></trkpt>
+            <trkpt lat="-34.30111" lon="-59.32581"></trkpt>
             <trkpt lat="-34.30138" lon="-59.32513"></trkpt>
             <trkpt lat="-34.30155" lon="-59.32454"></trkpt>
             <trkpt lat="-34.30183" lon="-59.32331"></trkpt>
@@ -386,10 +386,10 @@
             <trkpt lat="-34.13960" lon="-59.05425"></trkpt>
             <trkpt lat="-34.13877" lon="-59.05258"></trkpt>
             <trkpt lat="-34.13417" lon="-59.04314"></trkpt>
-            <trkpt lat="-34.13441" lon="-59.04297"></trkpt>
+            <trkpt lat="-34.13434" lon="-59.04302"></trkpt>
             <trkpt lat="-34.13447" lon="-59.04293"></trkpt>
             <trkpt lat="-34.13637" lon="-59.04685"></trkpt>
-            <trkpt lat="-34.13720" lon="-59.04636"></trkpt>
+            <trkpt lat="-34.13716" lon="-59.04638"></trkpt>
           </trkseg>
   </trk>
 </gpx>

@@ -4,44 +4,44 @@
      version="1.1"
      creator="Paxtracker">
   
-    <wpt lat="-34.09369" lon="-59.01721">
-    <name>101-Aristobulo del Valle e Ituzaingo 0520/1440/9999</name>
+    <wpt lat="-34.09367" lon="-59.01722">
+    <name>101-Aristobulo del Valle e Ituzaingo 0520/1344/2223</name>
   </wpt>
-    <wpt lat="-34.09799" lon="-59.01615">
-    <name>102-Aristobulo del Valle y Castelli 0521/1442/9999</name>
+    <wpt lat="-34.09797" lon="-59.01615">
+    <name>102-Aristobulo del Valle y Castelli 0522/1346/2225</name>
   </wpt>
-    <wpt lat="-34.09999" lon="-59.01561">
-    <name>103-Aristobulo del Valle y H. Yrigoyen 0522/1443/9999</name>
+    <wpt lat="-34.09995" lon="-59.01562">
+    <name>103-Aristobulo del Valle e Hipolito Yrigoyen 0523/1347/2226</name>
   </wpt>
-    <wpt lat="-34.10293" lon="-59.01422">
-    <name>104-San Lorenzo t Saenz Peña 0523/1444/9999</name>
+    <wpt lat="-34.10292" lon="-59.01422">
+    <name>104-San Lorenzo y Saenz Peña 0524/1349/2228</name>
   </wpt>
-    <wpt lat="-34.10519" lon="-59.01254">
-    <name>105-San Lorenzo y Dorrego 0524/1445/9999</name>
+    <wpt lat="-34.10514" lon="-59.01257">
+    <name>105-San Lorenzo y Dorrego 0525/1350/2229</name>
   </wpt>
     <wpt lat="-34.10665" lon="-59.01147">
-    <name>106-San Lorenzo y Lopez y Planes 0525/1446/9999</name>
+    <name>106-San Lorenzo y Lopez y Planes 0526/1351/2230</name>
   </wpt>
     <wpt lat="-34.10779" lon="-59.00969">
-    <name>107-Caseros y Laprida 0526/1447/9999</name>
+    <name>107-Caseros y Laprida 0527/1352/2231</name>
   </wpt>
-    <wpt lat="-34.10938" lon="-59.00859">
-    <name>108-Caseros y Pacheco 0527/1448/9999</name>
+    <wpt lat="-34.10937" lon="-59.00859">
+    <name>108-Caseros y Pacheco 0528/1353/2232</name>
   </wpt>
-    <wpt lat="-34.11155" lon="-59.01270">
-    <name>109-Pacheco y Justa Lima 0528/1449/9999</name>
+    <wpt lat="-34.11155" lon="-59.01269">
+    <name>109-Pacheco y Justa Lima 0530/1355/2234</name>
   </wpt>
     <wpt lat="-34.11264" lon="-59.01476">
-    <name>110-Pacheco y L. N. Alem 0529/1450/9999</name>
+    <name>110-Pacheco y Leandro N Alem 0531/1356/2235</name>
   </wpt>
-    <wpt lat="-34.11417" lon="-59.01765">
-    <name>111-Pacheco y Pje. Uruguay 0530/1451/9999</name>
+    <wpt lat="-34.11417" lon="-59.01764">
+    <name>111-Pacheco y Pje Uruguay 0532/1357/2236</name>
   </wpt>
-    <wpt lat="-34.11571" lon="-59.02028">
-    <name>112-Lavalle y Pacheco 0531/1452/9999</name>
+    <wpt lat="-34.11572" lon="-59.02028">
+    <name>112-Lavalle y Pacheco 0533/1358/2237</name>
   </wpt>
-    <wpt lat="-34.13721" lon="-59.04635">
-    <name>113-Planta Toyota 0540/1510/9999</name>
+    <wpt lat="-34.13718" lon="-59.04637">
+    <name>113-Planta Toyota 0540/1419/2258</name>
   </wpt>
     <trk>
     <name>
@@ -51,18 +51,17 @@
       Toyota - Zarate 3 (S. Lorenzo) - Entrada
     </desc>
     <trkseg>
-            <trkpt lat="-34.09369" lon="-59.01721"></trkpt>
-            <trkpt lat="-34.09369" lon="-59.01721"></trkpt>
-            <trkpt lat="-34.09799" lon="-59.01615"></trkpt>
+            <trkpt lat="-34.09367" lon="-59.01721"></trkpt>
+            <trkpt lat="-34.09798" lon="-59.01615"></trkpt>
             <trkpt lat="-34.09912" lon="-59.01582"></trkpt>
-            <trkpt lat="-34.09999" lon="-59.01561"></trkpt>
+            <trkpt lat="-34.09996" lon="-59.01562"></trkpt>
             <trkpt lat="-34.10177" lon="-59.01512"></trkpt>
             <trkpt lat="-34.10185" lon="-59.01507"></trkpt>
             <trkpt lat="-34.10186" lon="-59.01499"></trkpt>
             <trkpt lat="-34.10184" lon="-59.01483"></trkpt>
             <trkpt lat="-34.10225" lon="-59.01476"></trkpt>
             <trkpt lat="-34.10293" lon="-59.01422"></trkpt>
-            <trkpt lat="-34.10520" lon="-59.01254"></trkpt>
+            <trkpt lat="-34.10515" lon="-59.01257"></trkpt>
             <trkpt lat="-34.10594" lon="-59.01202"></trkpt>
             <trkpt lat="-34.10665" lon="-59.01147"></trkpt>
             <trkpt lat="-34.10737" lon="-59.01094"></trkpt>
@@ -73,15 +72,15 @@
             <trkpt lat="-34.10713" lon="-59.00988"></trkpt>
             <trkpt lat="-34.10780" lon="-59.00969"></trkpt>
             <trkpt lat="-34.10800" lon="-59.00959"></trkpt>
-            <trkpt lat="-34.10938" lon="-59.00859"></trkpt>
+            <trkpt lat="-34.10937" lon="-59.00859"></trkpt>
             <trkpt lat="-34.10942" lon="-59.00856"></trkpt>
             <trkpt lat="-34.11049" lon="-59.01071"></trkpt>
             <trkpt lat="-34.11112" lon="-59.01184"></trkpt>
-            <trkpt lat="-34.11156" lon="-59.01270"></trkpt>
+            <trkpt lat="-34.11155" lon="-59.01269"></trkpt>
             <trkpt lat="-34.11265" lon="-59.01476"></trkpt>
             <trkpt lat="-34.11312" lon="-59.01563"></trkpt>
             <trkpt lat="-34.11381" lon="-59.01698"></trkpt>
-            <trkpt lat="-34.11418" lon="-59.01765"></trkpt>
+            <trkpt lat="-34.11417" lon="-59.01764"></trkpt>
             <trkpt lat="-34.11554" lon="-59.02029"></trkpt>
             <trkpt lat="-34.11572" lon="-59.02028"></trkpt>
             <trkpt lat="-34.11661" lon="-59.02026"></trkpt>
@@ -148,11 +147,8 @@
             <trkpt lat="-34.13911" lon="-59.05304"></trkpt>
             <trkpt lat="-34.13901" lon="-59.05291"></trkpt>
             <trkpt lat="-34.13877" lon="-59.05258"></trkpt>
-            <trkpt lat="-34.13417" lon="-59.04314"></trkpt>
-            <trkpt lat="-34.13432" lon="-59.04304"></trkpt>
-            <trkpt lat="-34.13447" lon="-59.04293"></trkpt>
-            <trkpt lat="-34.13637" lon="-59.04685"></trkpt>
-            <trkpt lat="-34.13721" lon="-59.04635"></trkpt>
+            <trkpt lat="-34.13608" lon="-59.04704"></trkpt>
+            <trkpt lat="-34.13718" lon="-59.04637"></trkpt>
           </trkseg>
   </trk>
 </gpx>

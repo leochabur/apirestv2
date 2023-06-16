@@ -5,69 +5,66 @@
      creator="Paxtracker">
   
     <wpt lat="-33.69555" lon="-59.67236">
-    <name>101-Av Domingo Sarmiento y Juan B Justo 0410/1244/2123</name>
+    <name>101-Av Domingo Sarmiento y Juan B Justo 1610/2210/9999</name>
   </wpt>
     <wpt lat="-33.68977" lon="-59.66747">
-    <name>102-Av Domingo Sarmiento y Ricardo Rojas 0412/1246/2125</name>
+    <name>102-Av Domingo Sarmiento y Ricardo Rojas 1612/2212/9999</name>
   </wpt>
-    <wpt lat="-33.68734" lon="-59.66539">
-    <name>103-Av Domingo Sarmiento y Caseros 0413/1247/2126</name>
+    <wpt lat="-33.68733" lon="-59.66539">
+    <name>103-Av Domingo Sarmiento y Caseros 1613/2213/9999</name>
   </wpt>
     <wpt lat="-33.68951" lon="-59.66156">
-    <name>104-Caseros y Joaquin V Gonzalez 0415/1249/2128</name>
+    <name>104-Caseros y Joaquin V Gonzalez 1615/2215/9999</name>
   </wpt>
     <wpt lat="-33.69168" lon="-59.65792">
-    <name>105-Caseros y Romulo Naon 0416/1250/2129</name>
+    <name>105-Caseros y Romulo Naon 1616/2216/9999</name>
   </wpt>
-    <wpt lat="-33.69249" lon="-59.64764">
-    <name>106-Crucero Belgrano y 3 de Febrero 0419/1253/2132</name>
+    <wpt lat="-33.69248" lon="-59.64764">
+    <name>106-Crucero Belgrano y 3 de Febrero 1619/2219/9999</name>
   </wpt>
     <wpt lat="-33.68799" lon="-59.65464">
-    <name>107-3 de Febrero y Romulo Naon 0422/1256/2135</name>
+    <name>107-3 de Febrero y Romulo Naon 1622/2222/9999</name>
   </wpt>
     <wpt lat="-33.68356" lon="-59.66205">
-    <name>108-3 de Febrero y Av Domingo Sarmiento 0425/1259/2138</name>
+    <name>108-3 de Febrero y Av  Sarmiento 1625/2225/9999</name>
   </wpt>
     <wpt lat="-33.67747" lon="-59.67247">
-    <name>109-Bv Mariano Moreno y Obligado 0429/1303/2142</name>
+    <name>109-Bv Mariano Moreno y Obligado 1629/2229/9999</name>
   </wpt>
-    <wpt lat="-33.67372" lon="-59.66937">
-    <name>110-Obligado y Facundo Quiroga 0430/1304/2143</name>
+    <wpt lat="-33.67373" lon="-59.66937">
+    <name>110-Obligado y Facundo Quiroga 1631/2231/9999</name>
   </wpt>
     <wpt lat="-33.67661" lon="-59.67063">
-    <name>111-Av 11 de Septiembre y Balcarce 0431/1305/2144</name>
+    <name>111-Av 11 de Septiembre y Balcarce 1632/2232/9999</name>
   </wpt>
     <wpt lat="-33.68343" lon="-59.67646">
-    <name>112-Av 11 de Septiembre y San Bozzano 0433/1307/2146</name>
+    <name>112-Av 11 de Septiembre y San Bozzano 1633/2233/9999</name>
   </wpt>
     <wpt lat="-33.68849" lon="-59.68075">
-    <name>113-Av 11 de Septiembre y Lucio Mansilla 0435/1309/2148</name>
-  </wpt>
-    <wpt lat="-33.70100" lon="-59.66591">
-    <name>114-Av. juan B Justo y R. Naon 0438/1311/2151</name>
+    <name>113-Av 11 de Septiembre y Lucio Mansilla 1635/2235/9999</name>
   </wpt>
     <wpt lat="-33.78360" lon="-59.64028">
-    <name>115-Ruta 1001 y Ruta 9 0450/1324/2203</name>
+    <name>114-Ruta 1001 y Ruta 9 1650/2250/9999</name>
   </wpt>
     <wpt lat="-33.90909" lon="-59.39159">
-    <name>116-Estacion Alsina 0512/1346/2225</name>
+    <name>115-Estacion Alsina 1712/2312/9999</name>
   </wpt>
     <wpt lat="-34.13718" lon="-59.04637">
-    <name>117-Planta Toyota 0540/1419/2258</name>
+    <name>116-Planta Toyota 1800/2359/9999</name>
   </wpt>
     <trk>
     <name>
-      Toyota - Mantenimiento San Pedro - Entrada
+      Toyota - Mantenimiento Especial San Pedro - Entrada
     </name>
     <desc>
-      Toyota - Mantenimiento San Pedro - Entrada
+      Toyota - Mantenimiento Especial San Pedro - Entrada
     </desc>
     <trkseg>
             <trkpt lat="-33.69555" lon="-59.67237"></trkpt>
             <trkpt lat="-33.69158" lon="-59.66902"></trkpt>
             <trkpt lat="-33.68978" lon="-59.66747"></trkpt>
             <trkpt lat="-33.68852" lon="-59.66641"></trkpt>
-            <trkpt lat="-33.68734" lon="-59.66540"></trkpt>
+            <trkpt lat="-33.68734" lon="-59.66539"></trkpt>
             <trkpt lat="-33.68728" lon="-59.66534"></trkpt>
             <trkpt lat="-33.68951" lon="-59.66156"></trkpt>
             <trkpt lat="-33.69039" lon="-59.66014"></trkpt>
@@ -80,7 +77,7 @@
             <trkpt lat="-33.69608" lon="-59.65045"></trkpt>
             <trkpt lat="-33.69325" lon="-59.64813"></trkpt>
             <trkpt lat="-33.69251" lon="-59.64767"></trkpt>
-            <trkpt lat="-33.69249" lon="-59.64765"></trkpt>
+            <trkpt lat="-33.69249" lon="-59.64764"></trkpt>
             <trkpt lat="-33.69240" lon="-59.64751"></trkpt>
             <trkpt lat="-33.69240" lon="-59.64742"></trkpt>
             <trkpt lat="-33.69238" lon="-59.64733"></trkpt>
@@ -112,7 +109,7 @@
             <trkpt lat="-33.67744" lon="-59.67253"></trkpt>
             <trkpt lat="-33.67528" lon="-59.67069"></trkpt>
             <trkpt lat="-33.67427" lon="-59.66982"></trkpt>
-            <trkpt lat="-33.67373" lon="-59.66937"></trkpt>
+            <trkpt lat="-33.67374" lon="-59.66937"></trkpt>
             <trkpt lat="-33.67369" lon="-59.66933"></trkpt>
             <trkpt lat="-33.67414" lon="-59.66854"></trkpt>
             <trkpt lat="-33.67662" lon="-59.67063"></trkpt>
@@ -138,7 +135,8 @@
             <trkpt lat="-33.69640" lon="-59.67151"></trkpt>
             <trkpt lat="-33.69668" lon="-59.67111"></trkpt>
             <trkpt lat="-33.69872" lon="-59.66869"></trkpt>
-            <trkpt lat="-33.70099" lon="-59.66591"></trkpt>
+            <trkpt lat="-33.70062" lon="-59.66638"></trkpt>
+            <trkpt lat="-33.70105" lon="-59.66583"></trkpt>
             <trkpt lat="-33.70138" lon="-59.66545"></trkpt>
             <trkpt lat="-33.70286" lon="-59.66361"></trkpt>
             <trkpt lat="-33.70450" lon="-59.66166"></trkpt>
