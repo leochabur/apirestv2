@@ -4,44 +4,41 @@
      version="1.1"
      creator="Paxtracker">
   
-    <wpt lat="-33.80792" lon="-59.49754">
-    <name>101-Bulnes y Av. R. Simón 0435/1405/9999</name>
+    <wpt lat="-33.80808" lon="-59.49729">
+    <name>101-Bulnes y Av Rene Simon 0435/1304/2143</name>
   </wpt>
-    <wpt lat="-33.80689" lon="-59.49910">
-    <name>102-Bulnes y Boedo 0437/1406/9999</name>
+    <wpt lat="-33.80690" lon="-59.49910">
+    <name>102-Bulnes y Boedo 0436/1305/2144</name>
   </wpt>
     <wpt lat="-33.80542" lon="-59.50140">
-    <name>103-Bulnes y Av. San Martin 0438/1407/9999</name>
+    <name>103-Bulnes y Av San Martin 0438/1307/2146</name>
   </wpt>
     <wpt lat="-33.80405" lon="-59.50343">
-    <name>104-Carrasco y Saenz 0439/1408/9999</name>
+    <name>104-Bulnes y Juan B Justo 0439/1308/2147</name>
   </wpt>
-    <wpt lat="-33.80288" lon="-59.50524">
-    <name>105-Carrasco y Gorriti 0440/1409/9999</name>
+    <wpt lat="-33.80287" lon="-59.50525">
+    <name>105-Bulnes y Gorriti 0440/1309/2148</name>
   </wpt>
-    <wpt lat="-33.80165" lon="-59.50810">
-    <name>106-Carrasco y Del Corro 0441/1410/9999</name>
+    <wpt lat="-33.80158" lon="-59.50822">
+    <name>106-Carrasco y Del Corro 0441/1310/2149</name>
   </wpt>
-    <wpt lat="-33.80058" lon="-59.51005">
-    <name>107-Carrasco y Pacheco de Melo 0442/1411/9999</name>
+    <wpt lat="-33.79952" lon="-59.51195">
+    <name>107-Carrasco y Dollera 0443/1312/2151</name>
   </wpt>
-    <wpt lat="-33.79879" lon="-59.51325">
-    <name>108-Carrasco y Maipu 0443/1412/9999</name>
+    <wpt lat="-33.79851" lon="-59.51819">
+    <name>108-Ruta 41 y 4 de Febrero 0445/1314/2153</name>
   </wpt>
-    <wpt lat="-33.79860" lon="-59.51826">
-    <name>109-Ruta 41 y 4 de Febrero 0445/1413/9999</name>
+    <wpt lat="-33.80207" lon="-59.52116">
+    <name>109-Ruta 41 y Dorrego 0446/1315/2154</name>
   </wpt>
-    <wpt lat="-33.80208" lon="-59.52117">
-    <name>110-Ruta 41 y Dorrego 0446/1414/9999</name>
+    <wpt lat="-33.80663" lon="-59.52479">
+    <name>110-Ruta 41 y Lugones 0447/1316/2155</name>
   </wpt>
-    <wpt lat="-33.80667" lon="-59.52482">
-    <name>111-Ruta 41 y Lugones 0447/1415/9999</name>
+    <wpt lat="-33.81275" lon="-59.52971">
+    <name>111-Ruta 41 y General Roca 0449/1318/2157</name>
   </wpt>
-    <wpt lat="-33.81279" lon="-59.52974">
-    <name>112-Ruta 41 y Gral . Roca 0449/1416/9999</name>
-  </wpt>
-    <wpt lat="-34.13722" lon="-59.04634">
-    <name>113-Planta Toyota 0540/1510/9999</name>
+    <wpt lat="-34.13719" lon="-59.04636">
+    <name>112-Planta Toyota 0540/1419/2258</name>
   </wpt>
     <trk>
     <name>
@@ -51,29 +48,29 @@
       Toyota - Baradero 3 - Entrada
     </desc>
     <trkseg>
-            <trkpt lat="-33.80792" lon="-59.49754"></trkpt>
-            <trkpt lat="-33.80689" lon="-59.49910"></trkpt>
+            <trkpt lat="-33.80808" lon="-59.49729"></trkpt>
+            <trkpt lat="-33.80690" lon="-59.49910"></trkpt>
             <trkpt lat="-33.80646" lon="-59.49976"></trkpt>
             <trkpt lat="-33.80542" lon="-59.50140"></trkpt>
             <trkpt lat="-33.80532" lon="-59.50157"></trkpt>
             <trkpt lat="-33.80466" lon="-59.50250"></trkpt>
             <trkpt lat="-33.80405" lon="-59.50343"></trkpt>
-            <trkpt lat="-33.80288" lon="-59.50524"></trkpt>
+            <trkpt lat="-33.80287" lon="-59.50525"></trkpt>
             <trkpt lat="-33.80232" lon="-59.50614"></trkpt>
             <trkpt lat="-33.80242" lon="-59.50623"></trkpt>
             <trkpt lat="-33.80253" lon="-59.50636"></trkpt>
             <trkpt lat="-33.80259" lon="-59.50641"></trkpt>
-            <trkpt lat="-33.80165" lon="-59.50810"></trkpt>
-            <trkpt lat="-33.80058" lon="-59.51005"></trkpt>
-            <trkpt lat="-33.79879" lon="-59.51325"></trkpt>
+            <trkpt lat="-33.80158" lon="-59.50822"></trkpt>
+            <trkpt lat="-33.80106" lon="-59.50919"></trkpt>
+            <trkpt lat="-33.79952" lon="-59.51195"></trkpt>
             <trkpt lat="-33.79680" lon="-59.51681"></trkpt>
             <trkpt lat="-33.79767" lon="-59.51756"></trkpt>
-            <trkpt lat="-33.79861" lon="-59.51826"></trkpt>
+            <trkpt lat="-33.79852" lon="-59.51819"></trkpt>
             <trkpt lat="-33.80110" lon="-59.52030"></trkpt>
-            <trkpt lat="-33.80209" lon="-59.52117"></trkpt>
+            <trkpt lat="-33.80208" lon="-59.52116"></trkpt>
             <trkpt lat="-33.80373" lon="-59.52244"></trkpt>
-            <trkpt lat="-33.80668" lon="-59.52482"></trkpt>
-            <trkpt lat="-33.81280" lon="-59.52974"></trkpt>
+            <trkpt lat="-33.80664" lon="-59.52479"></trkpt>
+            <trkpt lat="-33.81276" lon="-59.52971"></trkpt>
             <trkpt lat="-33.81394" lon="-59.53066"></trkpt>
             <trkpt lat="-33.81838" lon="-59.53430"></trkpt>
             <trkpt lat="-33.82186" lon="-59.53708"></trkpt>
@@ -151,6 +148,7 @@
             <trkpt lat="-33.98978" lon="-59.36997"></trkpt>
             <trkpt lat="-33.99910" lon="-59.36222"></trkpt>
             <trkpt lat="-34.00033" lon="-59.36127"></trkpt>
+            <trkpt lat="-34.01271" lon="-59.35356"></trkpt>
             <trkpt lat="-34.01857" lon="-59.34990"></trkpt>
             <trkpt lat="-34.01899" lon="-59.34960"></trkpt>
             <trkpt lat="-34.01981" lon="-59.34897"></trkpt>
@@ -215,11 +213,8 @@
             <trkpt lat="-34.13911" lon="-59.05304"></trkpt>
             <trkpt lat="-34.13901" lon="-59.05291"></trkpt>
             <trkpt lat="-34.13877" lon="-59.05258"></trkpt>
-            <trkpt lat="-34.13417" lon="-59.04314"></trkpt>
-            <trkpt lat="-34.13432" lon="-59.04304"></trkpt>
-            <trkpt lat="-34.13447" lon="-59.04293"></trkpt>
-            <trkpt lat="-34.13637" lon="-59.04685"></trkpt>
-            <trkpt lat="-34.13723" lon="-59.04634"></trkpt>
+            <trkpt lat="-34.13608" lon="-59.04704"></trkpt>
+            <trkpt lat="-34.13720" lon="-59.04636"></trkpt>
           </trkseg>
   </trk>
 </gpx>

@@ -4,14 +4,14 @@
      version="1.1"
      creator="Paxtracker">
   
-    <wpt lat="-33.02112" lon="-58.53521">
-    <name>101-Terminal Gualeguaychu 0330/1300/9999</name>
+    <wpt lat="-33.02112" lon="-58.53536">
+    <name>101-Terminal Gualeguaychu 0330/1209/2048</name>
   </wpt>
-    <wpt lat="-33.49537" lon="-58.80145">
-    <name>102-Parador Ceibas 0421/1355/9999</name>
+    <wpt lat="-33.49538" lon="-58.80145">
+    <name>102-Parador Ceibas 0421/1300/2139</name>
   </wpt>
-    <wpt lat="-34.13718" lon="-59.04636">
-    <name>103-Planta Toyota 0540/1510/9999</name>
+    <wpt lat="-34.13653" lon="-59.04675">
+    <name>103-Planta Toyota 0540/1419/2258</name>
   </wpt>
     <trk>
     <name>
@@ -21,7 +21,7 @@
       Toyota - Gualeguaychu - Entrada
     </desc>
     <trkseg>
-            <trkpt lat="-33.02112" lon="-58.53522"></trkpt>
+            <trkpt lat="-33.02112" lon="-58.53536"></trkpt>
             <trkpt lat="-33.02110" lon="-58.53455"></trkpt>
             <trkpt lat="-33.02115" lon="-58.53445"></trkpt>
             <trkpt lat="-33.02120" lon="-58.53440"></trkpt>
@@ -406,11 +406,8 @@
             <trkpt lat="-34.13911" lon="-59.05304"></trkpt>
             <trkpt lat="-34.13901" lon="-59.05291"></trkpt>
             <trkpt lat="-34.13877" lon="-59.05258"></trkpt>
-            <trkpt lat="-34.13417" lon="-59.04314"></trkpt>
-            <trkpt lat="-34.13432" lon="-59.04303"></trkpt>
-            <trkpt lat="-34.13447" lon="-59.04293"></trkpt>
-            <trkpt lat="-34.13637" lon="-59.04685"></trkpt>
-            <trkpt lat="-34.13718" lon="-59.04637"></trkpt>
+            <trkpt lat="-34.13608" lon="-59.04704"></trkpt>
+            <trkpt lat="-34.13653" lon="-59.04675"></trkpt>
           </trkseg>
   </trk>
 </gpx>

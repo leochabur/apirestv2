@@ -4,56 +4,112 @@
      version="1.1"
      creator="Paxtracker">
   
+    <wpt lat="-34.22451" lon="-58.91918">
+    <name>101-Colectota y Lisandro De La torres 0708/9999/9999</name>
+  </wpt>
     <wpt lat="-34.16228" lon="-58.95892">
-    <name>101-25 de Mayo y Av. Roca 0720/9999/9999</name>
+    <name>102-25 de Mayo y Av. Roca 0720/9999/9999</name>
   </wpt>
     <wpt lat="-34.16212" lon="-58.96138">
-    <name>102-25 de Mayo y Rawson 0722/9999/9999</name>
+    <name>103-25 de Mayo y Rawson 0722/9999/9999</name>
   </wpt>
     <wpt lat="-34.16190" lon="-58.96472">
-    <name>103-25 de Mayo y Berutti 0724/9999/9999</name>
+    <name>104-25 de Mayo y Berutti 0724/9999/9999</name>
   </wpt>
     <wpt lat="-34.16182" lon="-58.96586">
-    <name>104-25 de Mayo y French 0725/9999/9999</name>
+    <name>105-25 de Mayo y French 0725/9999/9999</name>
   </wpt>
     <wpt lat="-34.16457" lon="-58.96837">
-    <name>105-Pueyrredon y Jean Jaures 0726/9999/9999</name>
+    <name>106-Pueyrredon y Jean Jaures 0726/9999/9999</name>
   </wpt>
     <wpt lat="-34.16443" lon="-58.97063">
-    <name>106-Balcarce y Jean Jaures 0727/9999/9999</name>
+    <name>107-Balcarce y Jean Jaures 0727/9999/9999</name>
   </wpt>
     <wpt lat="-34.16719" lon="-58.97093">
-    <name>107-Balcarce y Jacob 0728/9999/9999</name>
+    <name>108-Balcarce y Jacob 0728/9999/9999</name>
   </wpt>
     <wpt lat="-34.16926" lon="-58.96996">
-    <name>108-Las Heras y Ameghino 0731/9999/9999</name>
+    <name>109-Las Heras y Ameghino 0731/9999/9999</name>
   </wpt>
     <wpt lat="-34.16951" lon="-58.96661">
-    <name>109-French y Ameghino 0732/9999/9999</name>
+    <name>110-French y Ameghino 0732/9999/9999</name>
   </wpt>
     <wpt lat="-34.17040" lon="-58.96669">
-    <name>110-French y Cabrera 0733/9999/9999</name>
+    <name>111-French y Cabrera 0733/9999/9999</name>
   </wpt>
     <wpt lat="-34.17504" lon="-58.96714">
-    <name>111-French y Balbin 0735/9999/9999</name>
+    <name>112-French y Balbin 0735/9999/9999</name>
   </wpt>
     <wpt lat="-34.17555" lon="-58.96153">
-    <name>112-San Martin y Balbin 0737/9999/9999</name>
+    <name>113-San Martin y Balbin 0737/9999/9999</name>
   </wpt>
     <wpt lat="-34.17839" lon="-58.96068">
-    <name>113-Liniers y Rivadavia 0738/9999/9999</name>
+    <name>114-Liniers y Rivadavia 0738/9999/9999</name>
   </wpt>
     <wpt lat="-34.13724" lon="-59.04633">
-    <name>114-Planta Toyota 0750/9999/9999</name>
+    <name>115-Planta Toyota 0750/9999/9999</name>
   </wpt>
     <trk>
     <name>
       Toyota - Adm. Campana 2 (Ctro) - Entrada
     </name>
     <desc>
-      Toyota - Adm. Campana 2 (Ctro)- Entrada
+      Toyota - Adm. Campana 2 (Ctro) - Entrada
     </desc>
     <trkseg>
+            <trkpt lat="-34.22451" lon="-58.91918"></trkpt>
+            <trkpt lat="-34.22531" lon="-58.91862"></trkpt>
+            <trkpt lat="-34.22558" lon="-58.91841"></trkpt>
+            <trkpt lat="-34.22615" lon="-58.91772"></trkpt>
+            <trkpt lat="-34.22623" lon="-58.91781"></trkpt>
+            <trkpt lat="-34.22626" lon="-58.91795"></trkpt>
+            <trkpt lat="-34.22621" lon="-58.91813"></trkpt>
+            <trkpt lat="-34.22503" lon="-58.91926"></trkpt>
+            <trkpt lat="-34.22230" lon="-58.92117"></trkpt>
+            <trkpt lat="-34.21970" lon="-58.92303"></trkpt>
+            <trkpt lat="-34.20001" lon="-58.93728"></trkpt>
+            <trkpt lat="-34.19722" lon="-58.93932"></trkpt>
+            <trkpt lat="-34.19422" lon="-58.94149"></trkpt>
+            <trkpt lat="-34.19239" lon="-58.94278"></trkpt>
+            <trkpt lat="-34.19045" lon="-58.94422"></trkpt>
+            <trkpt lat="-34.18811" lon="-58.94589"></trkpt>
+            <trkpt lat="-34.18502" lon="-58.94816"></trkpt>
+            <trkpt lat="-34.18459" lon="-58.94852"></trkpt>
+            <trkpt lat="-34.18412" lon="-58.94898"></trkpt>
+            <trkpt lat="-34.18373" lon="-58.94944"></trkpt>
+            <trkpt lat="-34.18332" lon="-58.95001"></trkpt>
+            <trkpt lat="-34.18302" lon="-58.95050"></trkpt>
+            <trkpt lat="-34.18277" lon="-58.95096"></trkpt>
+            <trkpt lat="-34.18253" lon="-58.95144"></trkpt>
+            <trkpt lat="-34.18235" lon="-58.95189"></trkpt>
+            <trkpt lat="-34.18213" lon="-58.95252"></trkpt>
+            <trkpt lat="-34.18199" lon="-58.95303"></trkpt>
+            <trkpt lat="-34.18187" lon="-58.95363"></trkpt>
+            <trkpt lat="-34.18178" lon="-58.95419"></trkpt>
+            <trkpt lat="-34.18165" lon="-58.95603"></trkpt>
+            <trkpt lat="-34.18159" lon="-58.95629"></trkpt>
+            <trkpt lat="-34.18142" lon="-58.95774"></trkpt>
+            <trkpt lat="-34.18135" lon="-58.95915"></trkpt>
+            <trkpt lat="-34.18128" lon="-58.95957"></trkpt>
+            <trkpt lat="-34.18119" lon="-58.95983"></trkpt>
+            <trkpt lat="-34.18108" lon="-58.96005"></trkpt>
+            <trkpt lat="-34.18100" lon="-58.96015"></trkpt>
+            <trkpt lat="-34.18079" lon="-58.96037"></trkpt>
+            <trkpt lat="-34.18053" lon="-58.96051"></trkpt>
+            <trkpt lat="-34.18037" lon="-58.96057"></trkpt>
+            <trkpt lat="-34.18022" lon="-58.96062"></trkpt>
+            <trkpt lat="-34.17962" lon="-58.96075"></trkpt>
+            <trkpt lat="-34.17936" lon="-58.96073"></trkpt>
+            <trkpt lat="-34.17927" lon="-58.96067"></trkpt>
+            <trkpt lat="-34.16411" lon="-58.95921"></trkpt>
+            <trkpt lat="-34.16338" lon="-58.95819"></trkpt>
+            <trkpt lat="-34.16333" lon="-58.95815"></trkpt>
+            <trkpt lat="-34.16327" lon="-58.95815"></trkpt>
+            <trkpt lat="-34.16320" lon="-58.95819"></trkpt>
+            <trkpt lat="-34.16287" lon="-58.95854"></trkpt>
+            <trkpt lat="-34.16242" lon="-58.95791"></trkpt>
+            <trkpt lat="-34.16235" lon="-58.95791"></trkpt>
+            <trkpt lat="-34.16234" lon="-58.95800"></trkpt>
             <trkpt lat="-34.16228" lon="-58.95893"></trkpt>
             <trkpt lat="-34.16220" lon="-58.96019"></trkpt>
             <trkpt lat="-34.16212" lon="-58.96139"></trkpt>

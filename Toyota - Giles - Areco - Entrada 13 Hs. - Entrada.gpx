@@ -5,55 +5,55 @@
      creator="Paxtracker">
   
     <wpt lat="-34.50569" lon="-59.33460">
-    <name>101-Villa Espil 9999/1140/9999</name>
+    <name>101-Villa Espil 1140/9999/9999</name>
   </wpt>
     <wpt lat="-34.44981" lon="-59.45028">
-    <name>102-Terminal Giles (plataforma M.Bus) 9999/1150/9999</name>
+    <name>102-Terminal Giles (plataforma M.Bus) 1150/9999/9999</name>
   </wpt>
     <wpt lat="-34.44787" lon="-59.44891">
-    <name>103-Rivadavia y Urquiza 9999/1151/9999</name>
+    <name>103-Rivadavia y Urquiza 1151/9999/9999</name>
   </wpt>
     <wpt lat="-34.44777" lon="-59.44672">
-    <name>104-Maipu y Quintana 9999/1153/9999</name>
+    <name>104-Maipu y Quintana 1153/9999/9999</name>
   </wpt>
     <wpt lat="-34.44436" lon="-59.44553">
-    <name>105-Maipu y Mitre 9999/1155/9999</name>
+    <name>105-Maipu y Mitre 1155/9999/9999</name>
   </wpt>
     <wpt lat="-34.44106" lon="-59.44437">
-    <name>106-Maipu y Saavedra 9999/1156/9999</name>
+    <name>106-Maipu y Saavedra 1156/9999/9999</name>
   </wpt>
     <wpt lat="-34.43854" lon="-59.44351">
-    <name>107-Maipu y L. Scully 2 9999/1158/9999</name>
+    <name>107-Maipu y L. Scully 2 1158/9999/9999</name>
   </wpt>
     <wpt lat="-34.43704" lon="-59.44714">
-    <name>108-L. Scully 2 y 9 de Julio 9999/1200/9999</name>
+    <name>108-L. Scully 2 y 9 de Julio 1200/9999/9999</name>
   </wpt>
     <wpt lat="-34.24627" lon="-59.46367">
-    <name>109-Alvear y Smith 9999/1220/9999</name>
+    <name>109-Alvear y Smith 1220/9999/9999</name>
   </wpt>
     <wpt lat="-34.24678" lon="-59.47062">
-    <name>110-Alem y Zapiola 9999/1222/9999</name>
+    <name>110-Alem y Zapiola 1222/9999/9999</name>
   </wpt>
     <wpt lat="-34.24834" lon="-59.47811">
-    <name>111-Alem e Italia 9999/1224/9999</name>
+    <name>111-Alem e Italia 1224/9999/9999</name>
   </wpt>
     <wpt lat="-34.25247" lon="-59.47690">
-    <name>112-Italia e Irigoyen 9999/1225/9999</name>
+    <name>112-Italia e Irigoyen 1225/9999/9999</name>
   </wpt>
     <wpt lat="-34.25759" lon="-59.47539">
-    <name>113-Italia y Quetgles 9999/1226/9999</name>
+    <name>113-Italia y Quetgles 1226/9999/9999</name>
   </wpt>
     <wpt lat="-34.25711" lon="-59.47168">
-    <name>114-Quetgles y Belgrano 9999/1228/9999</name>
+    <name>114-Quetgles y Belgrano 1228/9999/9999</name>
   </wpt>
     <wpt lat="-34.25480" lon="-59.46264">
-    <name>115-Quetgles y Alberdi 9999/1230/9999</name>
+    <name>115-Quetgles y Alberdi 1230/9999/9999</name>
   </wpt>
     <wpt lat="-34.30113" lon="-59.32578">
-    <name>116-Ruta 8 y Ruta 193 (Solis) 9999/1240/9999</name>
+    <name>116-Ruta 8 y Ruta 193 (Solis) 1240/9999/9999</name>
   </wpt>
     <wpt lat="-34.13720" lon="-59.04636">
-    <name>117-Planta Toyota 9999/1310/9999</name>
+    <name>117-Planta Toyota 1310/9999/9999</name>
   </wpt>
     <trk>
     <name>
@@ -518,10 +518,7 @@
             <trkpt lat="-34.14006" lon="-59.05530"></trkpt>
             <trkpt lat="-34.13960" lon="-59.05425"></trkpt>
             <trkpt lat="-34.13877" lon="-59.05258"></trkpt>
-            <trkpt lat="-34.13417" lon="-59.04314"></trkpt>
-            <trkpt lat="-34.13422" lon="-59.04310"></trkpt>
-            <trkpt lat="-34.13447" lon="-59.04293"></trkpt>
-            <trkpt lat="-34.13637" lon="-59.04685"></trkpt>
+            <trkpt lat="-34.13608" lon="-59.04704"></trkpt>
             <trkpt lat="-34.13720" lon="-59.04636"></trkpt>
           </trkseg>
   </trk>
