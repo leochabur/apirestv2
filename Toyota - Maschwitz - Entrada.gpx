@@ -37,7 +37,7 @@
     <wpt lat="-34.40060" lon="-58.73627">
     <name>111-Colectora y De la Patria 0438/1312/2151</name>
   </wpt>
-    <wpt lat="-34.40309" lon="-58.73434">
+    <wpt lat="-34.40184" lon="-58.73529">
     <name>112-Colectora Oeste y Salta 0440/1314/2153</name>
   </wpt>
     <wpt lat="-34.39405" lon="-58.73907">
@@ -82,7 +82,7 @@
             <trkpt lat="-34.38154" lon="-58.75180"></trkpt>
             <trkpt lat="-34.38153" lon="-58.75159"></trkpt>
             <trkpt lat="-34.38156" lon="-58.75148"></trkpt>
-            <trkpt lat="-34.38163" lon="-58.75132"></trkpt>
+            <trkpt lat="-34.38163" lon="-58.75133"></trkpt>
             <trkpt lat="-34.38169" lon="-58.75124"></trkpt>
             <trkpt lat="-34.38186" lon="-58.75104"></trkpt>
             <trkpt lat="-34.38225" lon="-58.75073"></trkpt>
@@ -117,20 +117,19 @@
             <trkpt lat="-34.39689" lon="-58.74525"></trkpt>
             <trkpt lat="-34.39488" lon="-58.74148"></trkpt>
             <trkpt lat="-34.39482" lon="-58.74136"></trkpt>
-            <trkpt lat="-34.39520" lon="-58.74114"></trkpt>
             <trkpt lat="-34.39542" lon="-58.74100"></trkpt>
-            <trkpt lat="-34.39560" lon="-58.74086"></trkpt>
             <trkpt lat="-34.39610" lon="-58.74044"></trkpt>
             <trkpt lat="-34.39750" lon="-58.73894"></trkpt>
             <trkpt lat="-34.39805" lon="-58.73841"></trkpt>
             <trkpt lat="-34.39871" lon="-58.73784"></trkpt>
             <trkpt lat="-34.39921" lon="-58.73738"></trkpt>
             <trkpt lat="-34.40060" lon="-58.73626"></trkpt>
-            <trkpt lat="-34.40188" lon="-58.73525"></trkpt>
-            <trkpt lat="-34.40309" lon="-58.73434"></trkpt>
+            <trkpt lat="-34.40184" lon="-58.73529"></trkpt>
+            <trkpt lat="-34.40313" lon="-58.73431"></trkpt>
             <trkpt lat="-34.40717" lon="-58.73146"></trkpt>
             <trkpt lat="-34.40856" lon="-58.73043"></trkpt>
             <trkpt lat="-34.40859" lon="-58.73040"></trkpt>
+            <trkpt lat="-34.40856" lon="-58.73026"></trkpt>
             <trkpt lat="-34.40813" lon="-58.72951"></trkpt>
             <trkpt lat="-34.40781" lon="-58.72978"></trkpt>
             <trkpt lat="-34.40773" lon="-58.72986"></trkpt>
@@ -229,9 +228,10 @@
             <trkpt lat="-34.31825" lon="-58.86635"></trkpt>
             <trkpt lat="-34.31796" lon="-58.86677"></trkpt>
             <trkpt lat="-34.31713" lon="-58.86781"></trkpt>
-            <trkpt lat="-34.31656" lon="-58.86839"></trkpt>
-            <trkpt lat="-34.31625" lon="-58.86867"></trkpt>
-            <trkpt lat="-34.31561" lon="-58.86919"></trkpt>
+            <trkpt lat="-34.31678" lon="-58.86817"></trkpt>
+            <trkpt lat="-34.31637" lon="-58.86855"></trkpt>
+            <trkpt lat="-34.31604" lon="-58.86883"></trkpt>
+            <trkpt lat="-34.31494" lon="-58.86970"></trkpt>
             <trkpt lat="-34.30712" lon="-58.87559"></trkpt>
             <trkpt lat="-34.30242" lon="-58.87920"></trkpt>
             <trkpt lat="-34.29961" lon="-58.88132"></trkpt>
