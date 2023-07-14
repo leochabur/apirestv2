@@ -4,11 +4,11 @@
      version="1.1"
      creator="Paxtracker">
   
-    <wpt lat="-34.35526" lon="-58.79749">
-    <name>101-Banco Supervielle (Entrada Escobar) 0720/1450/9999</name>
+    <wpt lat="-34.35526" lon="-58.79748">
+    <name>101-Banco Supervielle (Entrada Escobar) 0720/1520/9999</name>
   </wpt>
-    <wpt lat="-34.12828" lon="-59.07951">
-    <name>102-Planta Master Bus 0750/1520/9999</name>
+    <wpt lat="-34.12836" lon="-59.07945">
+    <name>102-Predio Master Bus 0750/1550/9999</name>
   </wpt>
     <trk>
     <name>
@@ -177,7 +177,8 @@
             <trkpt lat="-34.12730" lon="-59.08032"></trkpt>
             <trkpt lat="-34.12737" lon="-59.08020"></trkpt>
             <trkpt lat="-34.12744" lon="-59.08013"></trkpt>
-            <trkpt lat="-34.12828" lon="-59.07951"></trkpt>
+            <trkpt lat="-34.12778" lon="-59.07987"></trkpt>
+            <trkpt lat="-34.12837" lon="-59.07945"></trkpt>
           </trkseg>
   </trk>
 </gpx>

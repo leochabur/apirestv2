@@ -4,11 +4,11 @@
      version="1.1"
      creator="Paxtracker">
   
-    <wpt lat="-34.35526" lon="-58.79749">
+    <wpt lat="-34.35526" lon="-58.79747">
     <name>101-Banco Supervielle (Entrada Escobar) 0820/9999/9999</name>
   </wpt>
-    <wpt lat="-34.12828" lon="-59.07951">
-    <name>102-Planta Master Bus 0850/9999/9999</name>
+    <wpt lat="-34.12828" lon="-59.07950">
+    <name>102-Predio Master Bus 0850/9999/9999</name>
   </wpt>
     <trk>
     <name>
@@ -18,7 +18,7 @@
       Master Bus S.A. - Rondin Taller Escobar - Entrada
     </desc>
     <trkseg>
-            <trkpt lat="-34.35527" lon="-58.79749"></trkpt>
+            <trkpt lat="-34.35526" lon="-58.79748"></trkpt>
             <trkpt lat="-34.35544" lon="-58.79768"></trkpt>
             <trkpt lat="-34.35549" lon="-58.79780"></trkpt>
             <trkpt lat="-34.35552" lon="-58.79791"></trkpt>
