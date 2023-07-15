@@ -5,73 +5,85 @@
      creator="Paxtracker">
   
     <wpt lat="-34.56852" lon="-58.85116">
-    <name>101-Ruta 24  y Murcia 0405/1224/2103</name>
+    <name>101-Ruta 24  y Murcia 0403/1224/2103</name>
   </wpt>
     <wpt lat="-34.56317" lon="-58.84134">
-    <name>102-Ruta 24 y Araucanos 0407/1226/2105</name>
+    <name>102-Ruta 24 y Araucanos 0405/1226/2105</name>
   </wpt>
     <wpt lat="-34.54870" lon="-58.81489">
-    <name>103-Ruta 24 y San Ignacio de Loyola 0411/1230/2109</name>
+    <name>103-Ruta 24 y San Ignacio de Loyola 0409/1230/2109</name>
+  </wpt>
+    <wpt lat="-34.54563" lon="-58.80930">
+    <name>104-Ruta 24 y Malabia 0410/1231/2110</name>
+  </wpt>
+    <wpt lat="-34.54313" lon="-58.80473">
+    <name>105-Ruta 24 y Granadero Baigorra 0411/1232/2111</name>
   </wpt>
     <wpt lat="-34.53971" lon="-58.79852">
-    <name>104-Ruta 24 y Murillo 0414/1233/2112</name>
+    <name>106-Ruta 24 y Murillo 0412/1233/2112</name>
   </wpt>
-    <wpt lat="-34.53842" lon="-58.79613">
-    <name>105-Ruta 24 y 3 de Febrero 0415/1234/2113</name>
+    <wpt lat="-34.53851" lon="-58.79631">
+    <name>107-Ruta 24 y 3 de Febrero 0413/1234/2113</name>
+  </wpt>
+    <wpt lat="-34.53046" lon="-58.77914">
+    <name>108-Ruta 24 y Padre Ustarroz 0416/1237/2116</name>
   </wpt>
     <wpt lat="-34.52529" lon="-58.76576">
-    <name>106-Ruta 24 y Julian Martel 0421/1240/2119</name>
+    <name>109-Ruta 24 y Julian Martel 0419/1240/2119</name>
   </wpt>
     <wpt lat="-34.52227" lon="-58.75977">
-    <name>107-Ruta 24 y Constitucion 0423/1242/2121</name>
+    <name>110-Ruta 24 y Constitucion 0421/1242/2121</name>
   </wpt>
     <wpt lat="-34.51838" lon="-58.75025">
-    <name>108-Ruta 197 y Leandro N Alem 0427/1248/2127</name>
+    <name>111-Ruta 197 y Leandro N Alem 0425/1248/2127</name>
   </wpt>
     <wpt lat="-34.51670" lon="-58.74674">
-    <name>109-Ruta 197 y Av Pte Peron 0429/1250/2129</name>
+    <name>112-Ruta 197 y Av Pte Peron 0427/1250/2129</name>
   </wpt>
     <wpt lat="-34.51515" lon="-58.74348">
-    <name>110-Ruta 197 y Dr Rene Favarolo 0430/1252/2131</name>
+    <name>113-Ruta 197 y Dr Rene Favarolo 0428/1252/2131</name>
   </wpt>
     <wpt lat="-34.51302" lon="-58.73841">
-    <name>111-Ruta 197 y Mendoza 0431/1253/2132</name>
+    <name>114-Ruta 197 y Mendoza 0429/1253/2132</name>
   </wpt>
     <wpt lat="-34.50926" lon="-58.72878">
-    <name>112-Ruta 197 y Ruta 8 0433/1255/2134</name>
+    <name>115-Ruta 197 y Ruta 8 0431/1255/2134</name>
   </wpt>
     <wpt lat="-34.50641" lon="-58.72219">
-    <name>113-Ruta 197 y Mozart 0434/1256/2135</name>
+    <name>116-Ruta 197 y Mozart 0432/1256/2135</name>
   </wpt>
     <wpt lat="-34.50250" lon="-58.71397">
-    <name>114-Ruta 197 y Ramos Mejia 0436/1258/2137</name>
+    <name>117-Ruta 197 y Ramos Mejia 0434/1258/2137</name>
   </wpt>
     <wpt lat="-34.49671" lon="-58.70757">
-    <name>115-Ruta 197 y Eustoquio Frias 0439/1301/2140</name>
+    <name>118-Ruta 197 y Eustoquio Frias 0437/1301/2140</name>
   </wpt>
     <wpt lat="-34.49176" lon="-58.70206">
-    <name>116-Ruta 197 y Los Andes 0440/1303/2142</name>
+    <name>119-Ruta 197 y Los Andes 0438/1303/2142</name>
   </wpt>
     <wpt lat="-34.49023" lon="-58.69831">
-    <name>117-Ruta 197 y Ing Huergo 0441/1304/2143</name>
+    <name>120-Ruta 197 y Ing Huergo 0439/1304/2143</name>
   </wpt>
     <wpt lat="-34.48841" lon="-58.69411">
-    <name>118-Ruta 197 y Sucre 0442/1305/2144</name>
+    <name>121-Ruta 197 y Sucre 0440/1305/2144</name>
   </wpt>
     <wpt lat="-34.48545" lon="-58.68723">
-    <name>119-Ruta 197 y Ireneo Portela 0444/1307/2146</name>
+    <name>122-Ruta 197 y Ireneo Portela 0442/1307/2146</name>
   </wpt>
     <wpt lat="-34.48258" lon="-58.68096">
-    <name>120-Ruta 197 y Juan de Herrera 0445/1308/2147</name>
+    <name>123-Ruta 197 y Juan de Herrera 0443/1308/2147</name>
   </wpt>
     <wpt lat="-34.47869" lon="-58.67347">
-    <name>121-Ruta 197 y Av Libertador San Martin 0447/1310/2149</name>
+    <name>124-Ruta 197 y Av Libertador San Martin 0445/1310/2149</name>
+  </wpt>
+    <wpt lat="-34.47689" lon="-58.66516">
+    <name>125-Ruta 197 y Marcos Sastre 0447/1312/2151</name>
   </wpt>
     <wpt lat="-34.47513" lon="-58.66247">
-    <name>122-Colectora Este y Ruta 197 0451/1314/2153</name>
+    <name>126-Colectora Este y Ruta 197 0449/1314/2153</name>
   </wpt>
     <wpt lat="-34.13719" lon="-59.04636">
-    <name>123-Planta Toyota 0540/1419/2258</name>
+    <name>127-Planta Toyota 0540/1419/2258</name>
   </wpt>
     <trk>
     <name>
@@ -103,10 +115,10 @@
             <trkpt lat="-34.55339" lon="-58.82345"></trkpt>
             <trkpt lat="-34.54907" lon="-58.81558"></trkpt>
             <trkpt lat="-34.54870" lon="-58.81490"></trkpt>
-            <trkpt lat="-34.54728" lon="-58.81232"></trkpt>
-            <trkpt lat="-34.54412" lon="-58.80652"></trkpt>
+            <trkpt lat="-34.54564" lon="-58.80930"></trkpt>
+            <trkpt lat="-34.54313" lon="-58.80473"></trkpt>
             <trkpt lat="-34.53972" lon="-58.79852"></trkpt>
-            <trkpt lat="-34.53842" lon="-58.79614"></trkpt>
+            <trkpt lat="-34.53852" lon="-58.79632"></trkpt>
             <trkpt lat="-34.53836" lon="-58.79604"></trkpt>
             <trkpt lat="-34.53822" lon="-58.79573"></trkpt>
             <trkpt lat="-34.53819" lon="-58.79561"></trkpt>
@@ -121,12 +133,20 @@
             <trkpt lat="-34.53440" lon="-58.78817"></trkpt>
             <trkpt lat="-34.53333" lon="-58.78571"></trkpt>
             <trkpt lat="-34.53087" lon="-58.78001"></trkpt>
-            <trkpt lat="-34.53044" lon="-58.77908"></trkpt>
+            <trkpt lat="-34.53047" lon="-58.77915"></trkpt>
             <trkpt lat="-34.53017" lon="-58.77841"></trkpt>
             <trkpt lat="-34.52916" lon="-58.77620"></trkpt>
             <trkpt lat="-34.52851" lon="-58.77474"></trkpt>
-            <trkpt lat="-34.52798" lon="-58.77341"></trkpt>
-            <trkpt lat="-34.52701" lon="-58.77074"></trkpt>
+            <trkpt lat="-34.52792" lon="-58.77326"></trkpt>
+            <trkpt lat="-34.52784" lon="-58.77329"></trkpt>
+            <trkpt lat="-34.52769" lon="-58.77331"></trkpt>
+            <trkpt lat="-34.52719" lon="-58.77369"></trkpt>
+            <trkpt lat="-34.52565" lon="-58.76836"></trkpt>
+            <trkpt lat="-34.52582" lon="-58.76827"></trkpt>
+            <trkpt lat="-34.52589" lon="-58.76828"></trkpt>
+            <trkpt lat="-34.52597" lon="-58.76834"></trkpt>
+            <trkpt lat="-34.52608" lon="-58.76832"></trkpt>
+            <trkpt lat="-34.52616" lon="-58.76829"></trkpt>
             <trkpt lat="-34.52529" lon="-58.76577"></trkpt>
             <trkpt lat="-34.52497" lon="-58.76485"></trkpt>
             <trkpt lat="-34.52489" lon="-58.76469"></trkpt>
@@ -207,7 +227,7 @@
             <trkpt lat="-34.47841" lon="-58.67176"></trkpt>
             <trkpt lat="-34.47780" lon="-58.66691"></trkpt>
             <trkpt lat="-34.47777" lon="-58.66677"></trkpt>
-            <trkpt lat="-34.47677" lon="-58.66493"></trkpt>
+            <trkpt lat="-34.47690" lon="-58.66517"></trkpt>
             <trkpt lat="-34.47603" lon="-58.66350"></trkpt>
             <trkpt lat="-34.47586" lon="-58.66334"></trkpt>
             <trkpt lat="-34.47522" lon="-58.66214"></trkpt>
