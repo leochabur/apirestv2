@@ -14,7 +14,13 @@
 
             $conn = mysqli_connect('mariadb-masterbus-trafico.planisys.net', 'c0mbexpuser', 'Mb2013Exp', 'c0mbexport');
 
-            $sql = getSqlAllServices();
+           // $sql = getSqlAllServices();
+
+            $client =  (isset($_GET['cli'])?$_GET['cli']:10);
+
+            $str =  (isset($_GET['str'])?$_GET['str']:1);
+
+            $sql = getSqlAllServices($client, $str);
 
             $result = mysqli_query($conn, $sql);
             $ordenes = [];
@@ -121,9 +127,47 @@
 
                 $gpx = simplexml_load_string(json_decode($res));*/
 
-                $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/getwid/$row[idExterno]");//file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/get/$row[gpx_file]");
+              //$xmlContent = file_get_contents($_SERVER["DOCUMENT_ROOT"]."/gpx/files/$row[gpx_file]");
+              //  $contentToObject = $xmlContent; //new \SimpleXMLElement($xmlContent);
+                /*$jsonData = json_encode($contentToObject);
+// $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/getwid/$row[idExterno]");
+                $app = \Slim\Slim::getInstance();
 
-                $gpx = simplexml_load_string(json_decode($res));
+                $app->status(200);
+
+                $app->contentType('application/json');
+             
+                echo $jsonData;*/
+
+
+    /*            $sqlGpx =  "SELECT gpx_file FROM cronogramas_gpx where id_cronograma = $row[idExterno]";
+                $resultGpx = mysqli_query($conn, $sqlGpx);
+
+                $res = "";
+                if ($rowGpx = mysqli_fetch_array($resultGpx))
+                {
+                    $res = file_get_contents($rowGpx['gpx_file']);
+                    $data = json_encode($res);
+                }
+      */         
+
+                    $sqlGpx =  "SELECT gpx_file FROM cronogramas_gpx where id_cronograma = $row[idExterno]";
+                    $resultGpx = mysqli_query($conn, $sqlGpx);
+
+                    $res = "";
+                    if ($rowGpx = mysqli_fetch_array($resultGpx))
+                    {
+                        $res = file_get_contents($rowGpx['gpx_file']);
+                        $data = json_encode($res);
+                    }
+                   
+
+                    $gpx = simplexml_load_string(json_decode($data));   
+
+                    $base64 = base64_encode(($res));
+
+
+  //              $gpx = simplexml_load_string(json_decode($data));
 
 
                 $paradas = procesarParadas($gpx, ['x' => $input['posicionPasajero']['latitud'], 'y' => $input['posicionPasajero']['longitud']]); 
@@ -133,7 +177,7 @@
                // $image = file_get_contents("$row[gpx_file]");
 
                // $base64 = base64_encode($image); 
-                $base64 = base64_encode(json_decode($res));
+//                $base64 = base64_encode(json_decode($res));
 
                 $nombre = (string)$parada['name'];
                 $result = [
@@ -208,7 +252,7 @@
                     $fecha_hora = str_replace('T', ' ', $busPos['f']);
 
                     $fecha = DateTime::createFromFormat('Y-m-d H:i:s', $fecha_hora);
-                    $fecha->sub(new DateInterval('PT3H'));
+                   // $fecha->sub(new DateInterval('PT3H'));
                     $fecha->add(new DateInterval('PT2M'));
 
                     $now = new DateTime();
@@ -253,18 +297,45 @@
 
                     $gpx = simplexml_load_string(json_decode($res));*/
 
-                    $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/getwid/$row[idExterno]");//file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/get/$row[gpx_file]");
+                 //   $res = file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/getwid/$row[idExterno]");//file_get_contents("http://traficonuevo.masterbus.net/api/v1/gpx/get/$row[gpx_file]");
 
-                    $gpx = simplexml_load_string(json_decode($res));
+                 //   $gpx = simplexml_load_string(json_decode($res));
+
+                  /*  $sqlGpx =  "SELECT gpx_file FROM cronogramas_gpx where id_cronograma = $row[idExterno]";
+                    $resultGpx = mysqli_query($conn, $sqlGpx);
+
+                    $res = "";
+                    if ($rowGpx = mysqli_fetch_array($resultGpx))
+                    {
+                        $res = file_get_contents($rowGpx['gpx_file']);
+                        $data = json_encode($res);
+                    }
+               */
+
+                    $sqlGpx =  "SELECT gpx_file FROM cronogramas_gpx where id_cronograma = $row[idExterno]";
+                    $resultGpx = mysqli_query($conn, $sqlGpx);
+
+                    $res = "";
+                    if ($rowGpx = mysqli_fetch_array($resultGpx))
+                    {
+                        $res = file_get_contents($rowGpx['gpx_file']);
+                        $data = json_encode($res);
+                    }
+                   
+
+                    $gpx = simplexml_load_string(json_decode($data));   
+
+                    $base64 = base64_encode(($res));
+                //$gpx = simplexml_load_string(json_decode($data));
 
                     $paradas = procesarParadas($gpx, ['x' => $input['posicionPasajero']['latitud'], 'y' => $input['posicionPasajero']['longitud']]); 
 
-                    $parada = $paradas[1]; 
+                   // $parada = $paradas[1]; 
 
                    // $image = file_get_contents("$row[gpx_file]");
 
                    // $base64 = base64_encode($image); 
-                    $base64 = base64_encode(json_decode($res));
+                   // $base64 = base64_encode(json_decode($res));
                 ////
 
 
@@ -536,6 +607,37 @@ function getSqlOrden($orden)
 }
 
 
+function getSqlAllServices($client, $str)
+{
+    return "SELECT concat(ord.nombre, ' - ', time_format(hsalidaplantareal, '%H:%i'))  as servicio,
+            ord.id as iOrdenTrabajo,
+            hcitacionreal as hcitacion,
+            hsalidaplantareal as hsalida,
+            hllegadaplantareal as hllegada,
+            hfinservicioreal as hfinalizacion,
+            CONCAT(apellido,', ', emp.nombre) as conductor,
+            interno,
+            o.ciudad as origen,
+            d.ciudad as destino,
+            s.id_cronograma as idExterno
+            FROM (SELECT id_chofer_1, hcitacionreal, vacio, borrada, id_ciudad_origen, id_ciudad_destino, id_servicio, id_micro, nombre, id, hllegadaplantareal , hsalidaplantareal,
+            hfinservicioreal, id_estructura, id_cliente, fservicio, id_estructura_servicio
+            FROM ordenes
+            WHERE id_estructura = $str and not borrada and fservicio between DATE_SUB(DATE(NOW()), INTERVAL 1 DAY) AND DATE_ADD(DATE(NOW()), INTERVAL 1 DAY)) ord
+            JOIN ciudades o on ord.id_ciudad_origen = o.id
+            JOIN ciudades d on d.id = ord.id_ciudad_destino
+            LEFT JOIN empleados emp ON emp.id_empleado = ord.id_chofer_1
+            JOIN (SELECT i_v, id, id_estructura, id_cronograma from servicios where id_estructura = $str) s ON s.id = ord.id_servicio AND s.id_estructura = ord.id_estructura_servicio
+            JOIN unidades u ON u.id = ord.id_micro
+            WHERE s.i_v = 'i' AND NOW() BETWEEN DATE_SUB(CONCAT(fservicio,' ', ord.hsalidaplantareal), INTERVAL 15 MINUTE) AND
+            DATE_ADD(CONCAT(fservicio,' ', ord.hfinservicioreal), INTERVAL 15 MINUTE) AND
+            (id_cliente = $client) AND vacio = 0 AND borrada = 0 AND
+            ord.id_estructura = $str
+            ORDER BY ord.nombre";
+}
+
+
+/*
 function getSqlAllServices()
 {
     return "SELECT concat(ord.nombre, ' - ', time_format(hsalidaplantareal, '%H:%i'))  as servicio,
@@ -558,12 +660,13 @@ function getSqlAllServices()
             LEFT JOIN empleados emp ON emp.id_empleado = ord.id_chofer_1
             JOIN (SELECT i_v, id, id_estructura, id_cronograma from servicios where id_estructura = 1) s ON s.id = ord.id_servicio AND s.id_estructura = ord.id_estructura_servicio
             JOIN unidades u ON u.id = ord.id_micro
-            WHERE s.i_v = 'i' AND NOW() BETWEEN DATE_SUB(CONCAT(fservicio,' ', ord.hsalidaplantareal), INTERVAL 15 MINUTE) AND
+            WHERE s.i_v = 'i' AND NOW() BETWEEN DATE_SUB(CONCAT(fservicio,' ', ord.hsalidaplantareal), INTERVAL 150 MINUTE) AND
             DATE_ADD(CONCAT(fservicio,' ', ord.hfinservicioreal), INTERVAL 15 MINUTE) AND
             (id_cliente = 10) AND (ord.nombre not like '%rondin%') AND vacio = 0 AND borrada = 0 AND
             ord.id_estructura = 1
             ORDER BY ord.nombre";
 }
+*/
     
 function getDataGraphHopper($p1x, $p1y, $p2x, $p2y)
 {
@@ -634,7 +737,52 @@ function getDataGraphHopper($p1x, $p1y, $p2x, $p2y)
 
 function getPosInterno($interno)
 {
-    if (file_exists("lib/nusoap.php")) 
+
+ $curl = curl_init();
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://davi.dashboard.soluciones-iot.net/gettkn",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS =>'{"unidad":"'.$interno.'"}',
+        CURLOPT_HTTPHEADER => array(
+        "Authorization: Basic dG1iOlRtYlNlY3JldDIwMjM="
+        ),
+        ));
+        $response = curl_exec($curl);
+
+
+        if(curl_exec($curl) === false)
+        {
+            throw new Exception(''.curl_error($curl) );
+        }
+        else
+        {
+            $data = json_decode($response, true);
+
+            
+            if ($data && is_array($data))
+            {
+                $record = $data[0];
+                if (array_key_exists('DeviceTime', $record))
+                {
+                    $registro = ['x' => round((float)$record['Latitud'],5), 'y' => round((float)$record['Longitud'], 5), 'f' => $record['DeviceTime']];
+                   //die( print_r($registro, true));
+                    return $registro;
+                }
+                else
+                {
+                    throw new Exception('Error al recuperar la posicion');
+                }
+            }
+            else
+            {
+                throw new Exception('No se pudo recuperar la posicion');
+            }            
+        }
+        curl_close($curl);
+
+/*    if (file_exists("lib/nusoap.php")) 
     {
         require "lib/nusoap.php";
     }
@@ -657,6 +805,7 @@ function getPosInterno($interno)
         return ['x' => round((float)$lati,5), 'y' => round((float)$long, 5), 'f' => $fecha];
     }
     catch (Exception $e){ throw new Exception($e->getMessage()); }
+   */
 }
 
 function procesarParadas($gpx, $pos)
